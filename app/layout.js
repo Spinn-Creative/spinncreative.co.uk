@@ -1,5 +1,5 @@
-import Header from './components';
-import Footer from './components';
+import Header from './components/Header.js';
+import Footer from './components/Footer.js';
 
 export const metadata = {
   title: "A leading agency for creative technology.",
