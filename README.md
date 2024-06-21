@@ -1,5 +1,6 @@
 # Spinn Creative
 
+![CI](https://img.shields.io/github/actions/workflow/status/Spinn-Creative/spinncreative.co.uk/ci.yml)
 ![Issues](https://img.shields.io/github/issues/Spinn-Creative/spinncreative.co.uk)
 ![Watchers](https://img.shields.io/github/watchers/Spinn-Creative/spinncreative.co.uk)
 
