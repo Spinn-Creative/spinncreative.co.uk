@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts';
+
+@import 'header';
+@import 'main';
+@import 'footer';
+
+// Defaults
+*, html {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    color: #333333;
+    font-size: 1.2rem;
+    font-family: Wix;
+}
+
+a {
+    color: #0070f3;
+}
+
+// XXL Screens +
+@media (min-width: 576px) {
+    html {
+        font-size: .95rem;
+    }
+}
+
+@media (min-width: 768px) {
+  html {
+      font-size: .95rem;
+  }
+}
+
+@media (min-width: 992px) {
+  html {
+      font-size: .95rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  html {
+      font-size: .95rem;
+  }
+}
+
+@media (min-width: 1400px) {
+  body {
+    font-size: 1.25rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  body {
+    font-size: 1.40rem;
+  }
+}
