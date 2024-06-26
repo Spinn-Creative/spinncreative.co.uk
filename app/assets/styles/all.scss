@@ -8,55 +8,34 @@
 @import 'main';
 @import 'footer';
 
-// Defaults
-*, html {
-    margin: 0;
-    padding: 0;
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #000; /* Black background */
+  color: #fff; /* White text */
+  display: flex;
+  flex-direction: column;
+
 }
 
-body {
-    color: #333333;
-    font-size: 1.2rem;
-    font-family: Wix;
+
+header {
+  color: #fff; /* Example header text color */
+  padding: 10px;
+  flex-shrink: 0; /* Prevent header from shrinking */
 }
 
-a {
-    color: #0070f3;
+footer {
+  color: #fff; /* Example footer text color */
+  padding: 10px;
+  flex-shrink: 0; /* Prevent footer from shrinking */
 }
 
-// XXL Screens +
-@media (min-width: 576px) {
-    html {
-        font-size: .95rem;
-    }
-}
 
-@media (min-width: 768px) {
-  html {
-      font-size: .95rem;
-  }
-}
-
-@media (min-width: 992px) {
-  html {
-      font-size: .95rem;
-  }
-}
-
-@media (min-width: 1200px) {
-  html {
-      font-size: .95rem;
-  }
-}
-
-@media (min-width: 1400px) {
-  body {
-    font-size: 1.25rem;
-  }
-}
-
-@media (min-width: 1920px) {
-  body {
-    font-size: 1.40rem;
-  }
+.main-content {
+  position: relative;
+  max-width: 3xl;
+  margin: auto;
 }

@@ -5,7 +5,7 @@ export default function Navbar() {
     <nav className="py-3">
       <div>
         <Link href="/">
-          <span className="full-name font-bold uppercase text-black">Spinn Creative</span>
+          <span className="logo font-bold text-white">Spinn Creative</span>
         </Link>
       </div>
     </nav>
