@@ -19,7 +19,7 @@
     "three": "^0.165.0"
   },
   "devDependencies": {
-    "eslint": "^8",
+    "eslint": "^9",
     "eslint-config-next": "14.2.4",
     "postcss": "^8",
     "prettier": "^3.3.2",
