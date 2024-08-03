@@ -1,9 +1,9 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/components/**/*.{js,ts,jsx,tsx,mdx}"
   ],
   theme: {
     screens: {
@@ -28,7 +28,10 @@ module.exports = {
     colors: {
       white: '#FFFFFF',
       black: '#000000',
-      'lead-black': '#333333'
+      'sc-tan': '#dac8be',
+      'sc-brown': '#55433a',
+      'sc-orange':'#ff856b',
+      'sc-green':'7fd1ae'
     },
     // fontFamily: {
     //   sans: ['Inter, sans-serif']
