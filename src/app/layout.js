@@ -1,6 +1,7 @@
 import Script from 'next/script';
 
 import Header from '../components/Header';
+import Main from '../components/Main';
 import Footer from '../components/Footer';
 
 import '../../public/styles/all.scss';
@@ -79,10 +80,12 @@ export default function RootLayout({ children }) {
         `}
 </Script>
 
-        <div className="px-2">
-          <Header role='header' />
-            <main className="sm:container" role="main">{children}</main>
-          <Footer role='footer' />
+        <div className="px-2 md:px-0">
+          <Header />
+            <main id='main' className='main' role="main">
+              {children}
+            </main>
+          <Footer id='footer' className='footer' role='footer' />
         </div>
       </body>
     </html>

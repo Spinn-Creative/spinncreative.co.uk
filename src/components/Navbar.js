@@ -11,7 +11,7 @@ export default function Menu() {
   };
 
   return (
-    <nav className="bg-white">
+    <nav className="sm:container bg-white">
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="relative flex items-center justify-between h-16">
           <div className="flex items-center justify-between w-full sm:w-auto">

@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import 'variables';
+
 @import 'fonts';
 
 @import 'header';
@@ -9,10 +11,29 @@
 @import 'footer';
 
 // Globals
+* {
+  margin: 0;
+  padding: 0;
+}
 html {
-
+  min-height: 100%;
+  position: relative;
+  text-size-adjust: none;
+  touch-action: manipulation;
 }
 
 body {
+  font: 19px/1.6 "Poppins", "Open Sans", Ubuntu, "Nimbus Sans L", Avenir, AvenirNext, "Segoe UI", Helvetica, Arial, sans-serif;
+  margin-bottom: $footer_height;
 
+}
+
+@keyframes fade-in {
+  from {
+      opacity: 0;
+  }
+
+  to {
+      opacity: 1;
+  }
 }

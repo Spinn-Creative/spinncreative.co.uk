@@ -2,7 +2,7 @@ import Navbar from './Navbar';
 
 export default function Header() {
     return (
-      <header className="sm:container">
+      <header id='header' className="header"  role='header'>
         <>
           <Navbar />
         </>

@@ -1,1 +1,10 @@
-@import 'hero';
+@import 'carousel';
+
+#main {
+  animation: fade-in 2s ease;
+}
+
+.channel-section {
+  width:  100vw;
+  background-color: red;
+}
