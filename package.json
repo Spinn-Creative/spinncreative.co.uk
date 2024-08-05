@@ -19,7 +19,7 @@
     "regl": "^2.1.0",
     "sharp": "^0.33.4",
     "swiper": "^11.1.9",
-    "three": "^0.167.0"
+    "three": "^0.167.1"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.20",
