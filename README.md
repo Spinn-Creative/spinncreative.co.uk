@@ -32,6 +32,6 @@ You can then use an editor to start modifying pages such as `/src/app/page.tsx`.
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE.md).
 
 &copy; 2024 Spinn Creative Limited. All rights reserved.
