@@ -1,0 +1,52 @@
+@import 'variables';
+
+.homepage-hero {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 5rem 0;
+  background-image: url('/images/hero-image.svg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  min-height: 50vh; /* Default height */
+
+  /* Ensures content appears above the background image */
+  .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  /* Styles for the heading and paragraph */
+  h1 {
+    color: black; /* Black color for h1 */
+  }
+
+  p {
+    color: black; /* White color for p */
+    max-width: 48rem; /* Increase max-width to widen the text block */
+  }
+
+  /* Button styling */
+  .btn-outline {
+    display: inline-block;
+    border: 3px solid #131313; /* Border with the specified color and thicker border */
+    color: #131313; /* Text color */
+    padding: 0.75rem 1.5rem; /* Button padding */
+    text-align: center;
+    transition: color 0.3s ease; /* Smooth transition for hover effect */
+    border-radius: 0; /* Square edges */
+
+    &:hover {
+      color: #ff856b; /* Change text color on hover */
+      background-color: transparent; /* No background fill on hover */
+    }
+  }
+
+  /* Increase height for medium screens and up */
+  @media (min-width: 768px) {
+    min-height: 70vh; /* Adjust this value to increase height */
+  }
+}

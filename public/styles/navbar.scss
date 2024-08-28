@@ -1,0 +1,47 @@
+@import 'variables';
+
+.navbar {
+  height: $navbar-height; // Set the height for the navbar
+
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%; // Ensure the logo container takes full height of the navbar
+
+    .relative {
+      height: 80%; // Adjust the logo to be 80% of the navbar height
+      display: flex;
+      align-items: center;
+    }
+
+    img {
+      height: auto; // Ensure the image maintains its aspect ratio
+      width: auto; // Responsive width based on the container
+      max-height: 100%; // Ensure it doesn't exceed the container height
+    }
+  }
+
+  .burger-menu {
+    cursor: pointer;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    @media (min-width: 768px) {
+      flex-direction: row;
+      gap: 2rem;
+    }
+
+    li {
+      &:hover {
+        color: #ff856b; // Use #ff856b for the hover effect
+      }
+    }
+  }
+}

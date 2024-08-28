@@ -1,0 +1,61 @@
+Web Developer
+--------------
+
+William Sawyerr
+https://www.williamsawyerr.net/
+
+Site Generics
+--------------
+
+Language: English (GB)
+
+Doctype: HTML5
+https://html.spec.whatwg.org/multipage/
+
+Technology
+-----------
+
+Next JS
+https://nextjs.org/
+
+Sass
+https://sass-lang.com/
+
+Tailwind
+https://tailwindcss.com/
+
+GitLab
+https://about.gitlab.com/
+
+Cloudflare
+https://www.cloudflare.com/en-gb/
+
+R2
+https://developers.cloudflare.com/r2/
+
+Cloudflare Web Analytics
+https://www.cloudflare.com/en-gb/web-analytics/
+
+Google Analytics
+https://analytics.google.com/
+
+Ionos
+https://www.ionos.co.uk/
+
+Tools
+-----
+
+Visual Studio Code
+https://code.visualstudio.com/
+
+Affinity Designer
+https://affinity.serif.com/en-gb/designer/
+
+Gimp
+https://www.gimp.org/
+
+Windows Terminal
+https://apps.microsoft.com/detail/9n0dx20hk701?rtc=1&hl=en-gb&gl=GB
+
+WinSCP
+https://winscp.net/

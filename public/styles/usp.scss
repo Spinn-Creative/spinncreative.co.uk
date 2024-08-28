@@ -1,0 +1,21 @@
+.usp-section {
+  .usp-icon {
+    background-color: #f9fafb; // Light gray background for icons
+    padding: 1rem;
+    border-radius: 50%; // Optional: Make icons circular
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .usp-heading {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    color: #1a202c; // Dark gray for headings
+  }
+
+  .usp-text {
+    color: #4a5568; // Lighter gray for text
+    line-height: 1.5; // Improves readability
+  }
+}
