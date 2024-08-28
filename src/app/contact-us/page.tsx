@@ -1,6 +1,56 @@
-import Link from 'next/link';
+'use client';
+
+import React, { useState, useEffect } from 'react';
 
 export default function ContactUs() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: '',
+  });
+
+  const [status, setStatus] = useState('');
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    setStatus('Sending...');
+
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (response.ok) {
+        setStatus('Your message has been sent successfully.');
+        setFormData({ name: '', email: '', message: '' });
+      } else {
+        setStatus('Your message has not been sent.');
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      setStatus('Your message has not been sent.');
+    }
+  };
+
+  // Clear the status message after 10 seconds
+  useEffect(() => {
+    if (status) {
+      const timer = setTimeout(() => {
+        setStatus('');
+      }, 10000); // 10 seconds
+
+      return () => clearTimeout(timer); // Cleanup the timer on unmount or status change
+    }
+  }, [status]);
+
   return (
     <div>
       {/* Hero Section */}
@@ -18,15 +68,14 @@ export default function ContactUs() {
         </p>
 
         <div className='text-lg mb-6'>
-          <p><strong>Email:</strong> <a href='mailto:hello@spinncerative.co.uk' className='text-[#ff856b]'>hello@spinncerative.co.uk</a></p>
-          <p><strong>Phone:</strong> Your Phone Number</p>
-          <p><strong>Address:</strong> Your Address</p>
+          <p><strong>Email:</strong> <a href='mailto:hello@spinncreative.co.uk' className='text-[#ff856b]'>hello@spinncreative.co.uk</a></p>
+          <p><strong>Phone:</strong> Phone Number</p>
         </div>
 
         <h3 className='text-3xl font-bold mb-4'>Follow us:</h3>
         <ul className='list-disc pl-5'>
-          <li className='mb-2'><strong>Instagram:</strong> Your Instagram Handle</li>
-          <li className='mb-2'><strong>LinkedIn:</strong> Your LinkedIn Profile</li>
+          <li className='mb-2'><strong>Instagram:</strong> Instagram Handle</li>
+          <li className='mb-2'><strong>LinkedIn:</strong> LinkedIn Profile</li>
         </ul>
 
         <p className='text-lg mb-6'>
@@ -40,21 +89,46 @@ export default function ContactUs() {
 
       {/* Contact Form Section */}
       <section className='contact-us-section-container'>
-        <form className='contact-us-form'>
+        <form className='contact-us-form' onSubmit={handleSubmit}>
           <div className='mb-4'>
             <label className='block text-lg mb-2' htmlFor='name'>Name</label>
-            <input className='w-full p-2 border border-gray-300 rounded' type='text' id='name' name='name' />
+            <input
+              className='w-full p-2 border border-gray-300 rounded'
+              type='text'
+              id='name'
+              name='name'
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className='mb-4'>
             <label className='block text-lg mb-2' htmlFor='email'>Email</label>
-            <input className='w-full p-2 border border-gray-300 rounded' type='email' id='email' name='email' />
+            <input
+              className='w-full p-2 border border-gray-300 rounded'
+              type='email'
+              id='email'
+              name='email'
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
           </div>
           <div className='mb-4'>
             <label className='block text-lg mb-2' htmlFor='message'>Message</label>
-            <textarea className='w-full p-2 border border-gray-300 rounded' id='message' name='message' rows={5}></textarea>
+            <textarea
+              className='w-full p-2 border border-gray-300 rounded'
+              id='message'
+              name='message'
+              value={formData.message}
+              onChange={handleChange}
+              rows={5}
+              required
+            ></textarea>
           </div>
           <button className='btn-submit' type='submit'>Submit</button>
         </form>
+        {status && <p className='mt-4'>{status}</p>}
       </section>
     </div>
   );
