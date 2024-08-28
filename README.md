@@ -1,5 +1,5 @@
 ![<img src="/public/images/logo.png" />](/public/images/logo.png)
-<img src="/public/images/logo-symbol-only.png" alt="Spinn Creative logo" width="200" height="200">
+<img src="/public/images/logo-symbol-only.png" alt="Spinn Creative logo" style="width:100px;height:auto;" />
 
 
 ![Last commit](https://img.shields.io/github/last-commit/Spinn-Creative/spinncreative.co.uk)
