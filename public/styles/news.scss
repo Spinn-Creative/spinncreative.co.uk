@@ -1,0 +1,38 @@
+@import 'variables';
+
+.news-hero {
+    position: relative;
+    width: 100%;
+    height: 70vh; /* Set the height of the hero section */
+    background-image: url('/images/hero-image.svg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    .news-hero-overlay {
+      background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+      padding: 2rem;
+      border-radius: 0.5rem;
+    }
+  
+    h1 {
+      color: white;
+    }
+  }
+  
+  .news-section-container {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+  
+    h2 {
+      color: #ff856b; /* Use a color consistent with your brand */
+    }
+  
+    p {
+      color: #55433a; /* Use a darker color for body text */
+    }
+  }
+  

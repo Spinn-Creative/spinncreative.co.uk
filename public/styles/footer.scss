@@ -1,3 +1,73 @@
-#footer {
-  animation: fade-in 2.5s ease;
+@import 'variables';
+
+.footer {
+  background-color: #000;
+  color: white;
+  padding: 4rem 0; /* Default padding for all screen sizes */
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  }
+
+  .footer-section {
+    .footer-heading {
+      font-size: 1.125rem;
+      font-weight: bold;
+      color: white;
+      margin-bottom: 1rem;
+    }
+
+    .footer-list {
+      list-style: none;
+      padding: 0;
+
+      .footer-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+
+        .footer-icon {
+          color: #7fd1ae;
+          margin-right: 0.5rem;
+          width: 1.25rem;
+          height: 1.25rem;
+        }
+
+        .footer-link {
+          color: #dac8be;
+          text-decoration: none;
+
+          &:hover {
+            color: #ff856b;
+          }
+        }
+      }
+
+      li {
+        margin-bottom: 0.5rem;
+
+        .footer-link {
+          color: #dac8be;
+          text-decoration: none;
+
+          &:hover {
+            color: #ff856b;
+          }
+        }
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding: 6rem 0; /* Increased padding for md: and up screens */
+  }
 }

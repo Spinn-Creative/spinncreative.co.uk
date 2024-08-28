@@ -1,0 +1,26 @@
+@import 'variables';
+
+.our-services-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.our-service-card {
+  position: relative;
+  margin-bottom: 2rem; /* Add some space between the cards */
+
+  .flex-1 {
+    width: 50%; /* Split the card content and image evenly */
+  }
+
+  h3 {
+    font-size: 2.5rem; /* Large text for the card titles */
+  }
+
+  /* Background styling similar to carousel cards */
+  .text-white {
+    background-color: #55433a; /* Match the background color of the carousel cards */
+  }
+}

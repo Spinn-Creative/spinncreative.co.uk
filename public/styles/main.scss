@@ -1,10 +1,11 @@
-@import 'carousel';
+@import 'variables';
+@import 'homepage-hero';
+@import 'our-services';
+@import 'about-us';
+@import 'graphics-design.scss';
+@import 'contact-us';
+@import 'terms-of-use';
+@import 'privacy-policy';
+@import 'news';
+@import 'careers';
 
-#main {
-  animation: fade-in 2s ease;
-}
-
-.channel-section {
-  width:  100vw;
-  background-color: red;
-}
