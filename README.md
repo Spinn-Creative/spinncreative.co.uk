@@ -1,4 +1,4 @@
-<img src="/public/images/logo.png" alt="Spinn Creative logo" style="width:50px;height:auto;" />
+<img src="/public/images/logo.png" alt="Spinn Creative logo" style="width:100px;height:auto;" />
 
 
 ![Last commit](https://img.shields.io/github/last-commit/Spinn-Creative/spinncreative.co.uk)
