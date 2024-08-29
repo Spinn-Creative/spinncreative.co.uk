@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+   <!-- Home Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>monthly</changefreq>
+      <priority>1.0</priority>
+   </url>
+
+   <!-- About Us Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/about-us</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- Graphics Design Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/graphics-design</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- 3D Modelling Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/3d-modelling</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- Animation Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/animation</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- Contact Us Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/contact-us</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.8</priority>
+   </url>
+
+   <!-- News Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/news</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>weekly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <!-- Careers Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/careers</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.6</priority>
+   </url>
+
+   <!-- Terms of Use Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/terms-of-use</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+   <!-- Privacy Policy Page -->
+   <url>
+      <loc>https://www.spinncreative.co.uk/privacy-policy</loc>
+      <lastmod>2024-08-24</lastmod>
+      <changefreq>yearly</changefreq>
+      <priority>0.5</priority>
+   </url>
+
+</urlset>

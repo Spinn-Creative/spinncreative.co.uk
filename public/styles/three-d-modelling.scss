@@ -1,0 +1,108 @@
+@import 'variables';
+
+.three-d-hero {
+  position: relative;
+  width: 100%;
+  height: 70vh; /* Set the height of the hero section */
+  background-image: url('/images/hero-image.svg'); /* Replace with your image path */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .three-d-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+
+  h1 {
+    color: white;
+  }
+}
+
+.three-d-section-container {
+  padding: 4rem 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+
+  h2 {
+    color: #333333; /* Different color for headings */
+  }
+
+  p {
+    color: #555555; /* A darker shade for body text */
+  }
+}
+
+.full-width-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4rem 0;
+
+  .image-text-pair {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+
+    .image-side {
+      flex: 1;
+      max-width: 50%;
+    }
+
+    .text-side {
+      flex: 1;
+      max-width: 50%;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .text-content {
+        text-align: left;
+        max-width: 40%; /* Reduced width for a more focused text block */
+        
+        h3 {
+          color: #333333;
+          font-weight: bold;
+          font-size: 2.5rem;
+          position: relative;
+        }
+
+        .decorative-line {
+          content: '';
+          display: block;
+          width: 50px;
+          height: 5px; /* Thicker line */
+          background-color: #ff856b;
+          margin: 10px 0 20px 0;
+        }
+
+        p {
+          color: #555555; /* A consistent shade for body text */
+          margin-top: 1rem;
+        }
+
+        p strong {
+          color: #333333; /* A more unified color approach */
+        }
+      }
+    }
+  }
+}
+
+.btn-outline {
+  display: inline-block;
+  border: 2px solid #131313;
+  color: #131313;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  transition: color 0.3s ease;
+  border-radius: 0;
+
+  &:hover {
+    color: #ff856b;
+  }
+}

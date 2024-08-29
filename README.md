@@ -6,7 +6,7 @@
 ![Issues](https://img.shields.io/github/issues/Spinn-Creative/spinncreative.co.uk)
 ![Watchers](https://img.shields.io/github/watchers/Spinn-Creative/spinncreative.co.uk)
 
-These are the source and configuration files for the website of <a href="https://www.spinncreative.co.uk">Spinn Creative</a>, which is a business-to-business creative agency in the UK.
+These are the source and configuration files for the website of <a href="https://www.spinncreative.co.uk" target="_blank">Spinn Creative</a>, which is a business-to-business creative agency in the UK.
 
 ## Prerequisites
 
