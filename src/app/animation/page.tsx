@@ -24,12 +24,14 @@ export default function Animation() {
         <div className='image-text-pair'>
           <div className='image-side left'>
             <video
-              controls
+              autoPlay
+              loop
+              muted
               width='100%'
               height='auto'
               className='rounded-r-lg'
             >
-              <source src='/videos/animation-sample.mp4' type='video/mp4' />
+              <source src='/videos/idc-life.mp4' type='video/mp4' />
               Your browser does not support the video tag.
             </video>
           </div>
@@ -72,12 +74,14 @@ export default function Animation() {
           </div>
           <div className='image-side right'>
             <video
-              controls
+              autoPlay
+              loop
+              muted
               width='100%'
               height='auto'
               className='rounded-l-lg'
             >
-              <source src='/videos/animation-sample.mp4' type='video/mp4' />
+              <source src='/videos/comp.mp4' type='video/mp4' />
               Your browser does not support the video tag.
             </video>
           </div>

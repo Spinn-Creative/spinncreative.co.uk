@@ -1,12 +1,13 @@
 <img src="/public/images/logo.png" alt="Spinn Creative logo" style="width:400px;height:auto;" />
 
-
 ![Last commit](https://img.shields.io/github/last-commit/Spinn-Creative/spinncreative.co.uk)
 ![CI](https://img.shields.io/github/actions/workflow/status/Spinn-Creative/spinncreative.co.uk/ci.yml)
 ![Issues](https://img.shields.io/github/issues/Spinn-Creative/spinncreative.co.uk)
 ![Watchers](https://img.shields.io/github/watchers/Spinn-Creative/spinncreative.co.uk)
 
 These are the source and configuration files for the website of <a href="https://www.spinncreative.co.uk" target="_blank">Spinn Creative</a>, which is a business-to-business creative agency in the UK.
+
+<img src="/public/images/homepage.png" alt="Homepage" style="width: 100%; height: auto;" />
 
 ## Prerequisites
 

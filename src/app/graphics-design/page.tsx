@@ -43,7 +43,7 @@ export default function GraphicsDesign() {
       {/* Hero Section */}
       <section className='graphics-design-hero flex items-center justify-center text-center'>
         <div className='graphics-design-hero-overlay'>
-          <h1 className='text-6xl font-bold text-white'>Graphic Design</h1>
+          <h1 className='text-6xl font-bold text-white'>Graphics Design</h1>
         </div>
       </section>
 
