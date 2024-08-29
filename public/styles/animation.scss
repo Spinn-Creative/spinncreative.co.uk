@@ -1,6 +1,6 @@
 @import 'variables';
 
-.three-d-hero {
+.animation-hero {
   position: relative;
   width: 100%;
   height: 70vh; /* Set the height of the hero section */
@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: center;
 
-  .three-d-hero-overlay {
+  .animation-hero-overlay {
     background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
     padding: 2rem;
     border-radius: 0.5rem;
@@ -22,7 +22,7 @@
   }
 }
 
-.three-d-section-container {
+.animation-section-container {
   padding: 4rem 2rem;
   max-width: 800px;
   margin: 0 auto;

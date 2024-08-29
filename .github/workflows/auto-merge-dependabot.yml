@@ -1,0 +1,24 @@
+name: Auto-merge Dependabot updates
+
+on:
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+jobs:
+  automerge:
+    if: github.actor == 'dependabot[bot]'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Auto-merge Dependabot PR
+        uses: pascalgn/automerge-action@v0.14.3
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          merge_method: squash
+          commit_message: "Auto-merged by Dependabot"
+          labels: "dependencies"

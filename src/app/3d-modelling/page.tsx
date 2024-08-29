@@ -13,7 +13,7 @@ export default function ThreeDModelling() {
 
       {/* 3D Design Services Section */}
       <section className='three-d-section-container'>
-        <h2 className='text-6xl font-bold mb-6'>3D Design Services</h2>
+        <h2 className='text-4xl font-bold mb-4'>3D Design Services</h2>
         <p className='text-lg mb-6'>
           Step into the future of design with Spinn Creative. Our 3D design services open up a world of possibilities, from realistic product visualisations to immersive environments and architectural renderings. Whether you’re looking to showcase a product, create a virtual space, or develop complex models, our 3D design experts have the skills and technology to bring your ideas to life with precision and creativity.
         </p>

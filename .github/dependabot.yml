@@ -11,10 +11,7 @@ updates:
       interval: "daily"
     commit-message:
       prefix: "chore"
-    open-pull-requests-limit: 5 # Limit the number of open PRs to 5
-    automerge: 
-      - type: "all" # Automerge minor and patch updates
-        strategy: "minor"
+    open-pull-requests-limit: 5
     groups:
       eslint-dependencies:
         patterns:
@@ -23,7 +20,8 @@ updates:
         patterns:
           - "jest*"
     ignore:
-      - dependency-name: "sensitive-package" # Example package to ignore
+      - dependency-name: "sensitive-package"
         versions: ["1.x", "2.x"]
     reviewers:
       - "wsscuid798"
+
