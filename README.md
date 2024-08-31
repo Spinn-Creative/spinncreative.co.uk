@@ -17,7 +17,7 @@ The Node.js runtime (version 22+).
 
 First, run the development server:
 
-```bashh
+```bash
 npm run dev
 # or
 yarn dev
