@@ -17,12 +17,12 @@ export default function GraphicsDesign() {
       Marketing Materials: Brochures, flyers, posters, and digital ads that make an impact.
       Web & App Design: User-centric designs that are both functional and visually appealing.
       Packaging Design: Creative packaging that stands out on the shelves and tells your brand’s story.`,
-      image: '/images/red-wave.webp',
+      image: '/images/logos.png',
     },
     {
       title: 'Transform Your Ideas into Stunning Visuals',
       description: `Our graphic design process is collaborative and client-focused. We work closely with you to understand your brand, your goals, and your audience, ensuring that every design we create is not just beautiful but also effective.`,
-      image: '/images/red-wave.webp',
+      image: '/images/gamer.png',
     },
   ];
 
@@ -107,7 +107,7 @@ export default function GraphicsDesign() {
 
       {/* Call to Action Button */}
       <div className='text-center mt-8 mb-16'>
-        <a href='/contact' className='btn-outline'>
+        <a href='/contact-us' className='btn-outline'>
           Get in touch with us
         </a>
       </div>
