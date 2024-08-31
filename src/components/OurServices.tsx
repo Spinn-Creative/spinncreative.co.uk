@@ -7,15 +7,15 @@ export default function OurServices() {
   const services = [
     {
       title: 'Graphics Design',
-      image: '/images/red-wave.webp',
+      image: '/images/cabin.png',
     },
     {
       title: '3D Modelling',
-      image: '/images/red-wave.webp',
+      image: '/images/smothvolc.png',
     },
     {
       title: 'Animation',
-      image: '/images/red-wave.webp',
+      image: '/images/digital.png',
     },
   ];
 
