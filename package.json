@@ -16,7 +16,8 @@
     "nodemailer": "^6.9.14",
     "react": "^18",
     "react-dom": "^18",
-    "react-feather": "^2.0.10"
+    "react-feather": "^2.0.10",
+    "sharp": "^0.33.5"
   },
   "devDependencies": {
     "@types/node": "^20",

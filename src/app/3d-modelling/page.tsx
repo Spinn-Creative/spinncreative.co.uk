@@ -24,11 +24,11 @@ export default function ThreeDModelling() {
         <div className='image-text-pair'>
           <div className='image-side left'>
             <Image 
-              src='/images/red-wave.webp' 
+              src='/images/p1-3d.jpg' 
               alt='Product Visualisation' 
               layout='responsive'
-              width={500}
-              height={300}
+              width={1920} 
+              height={1080} 
               className='rounded-r-lg'
             />
           </div>
@@ -68,11 +68,11 @@ export default function ThreeDModelling() {
           </div>
           <div className='image-side right'>
             <Image 
-              src='/images/red-wave.webp' 
+              src='/images/p2-3d.jpg' 
               alt='3D Modelling' 
               layout='responsive'
-              width={500}
-              height={300}
+              width={1920} 
+              height={1080} 
               className='rounded-l-lg'
             />
           </div>
@@ -84,11 +84,11 @@ export default function ThreeDModelling() {
         <div className='image-text-pair'>
           <div className='image-side left'>
             <Image 
-              src='/images/red-wave.webp' 
+              src='/images/p3-3d.png' 
               alt='Why 3D?' 
               layout='responsive'
-              width={500}
-              height={300}
+              width={1920} 
+              height={1080} 
               className='rounded-r-lg'
             />
           </div>
