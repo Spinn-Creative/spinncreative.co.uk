@@ -1,29 +1,28 @@
 @import 'variables';
 
+// Base Styles (Mobile First)
+// Default styles that apply to all devices, especially mobile.
+
 .footer {
   background-color: #000;
   color: white;
-  padding: 4rem 0; /* Default padding for all screen sizes */
+  padding: 3rem 0; /* Reduced padding for mobile screens */
 
   .container {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
-    gap: 2rem;
+    grid-template-columns: 1fr 1fr;  /* Two columns for mobile view */
+    gap: 1.5rem; /* Reduced gap for mobile */
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
-
-    @media (min-width: 768px) {
-      grid-template-columns: repeat(4, 1fr);
-    }
+    padding: 0 1rem; /* Reduced padding for smaller screens */
   }
 
   .footer-section {
     .footer-heading {
-      font-size: 1.125rem;
+      font-size: 1rem; /* Slightly smaller font size for headings */
       font-weight: bold;
       color: white;
-      margin-bottom: 1rem;
+      margin-bottom: 0.75rem; /* Reduced margin-bottom */
     }
 
     .footer-list {
@@ -37,14 +36,15 @@
 
         .footer-icon {
           color: #7fd1ae;
-          margin-right: 0.5rem;
-          width: 1.25rem;
-          height: 1.25rem;
+          margin-right: 0.4rem; /* Reduced space between icon and text */
+          width: 1.125rem; /* Slightly smaller icons */
+          height: 1.125rem;
         }
 
         .footer-link {
           color: #dac8be;
           text-decoration: none;
+          font-size: 0.875rem; /* Slightly smaller font size for links */
 
           &:hover {
             color: #ff856b;
@@ -58,6 +58,7 @@
         .footer-link {
           color: #dac8be;
           text-decoration: none;
+          font-size: 0.875rem; /* Slightly smaller font size for links */
 
           &:hover {
             color: #ff856b;
@@ -67,7 +68,55 @@
     }
   }
 
-  @media (min-width: 768px) {
-    padding: 6rem 0; /* Increased padding for md: and up screens */
+  .footer-copyright {
+    text-align: center;
+    color: #dac8be;
+    margin-top: 1.5rem; /* Reduced margin-top */
+    font-size: 0.75rem; /* Slightly smaller font size */
+
+    a {
+      color: #dac8be;
+      text-decoration: none;
+
+      &:hover {
+        color: #ff856b;
+      }
+    }
   }
+}
+
+// Small Devices and up (576px and up)
+@media only screen and (min-width: 576px) {
+  // Styles for small devices (e.g., larger smartphones) and up
+}
+
+// Medium Devices and up (768px and up)
+@media only screen and (min-width: 768px) {
+  .footer {
+    padding: 6rem 0; /* Increased padding for md: and up screens */
+
+    .container {
+      grid-template-columns: repeat(4, 1fr);  /* Four columns for larger screens */
+    }
+
+    .footer-copyright {
+      margin-top: 3rem;
+      font-size: 1rem;
+    }
+  }
+}
+
+// Large Devices and up (992px and up)
+@media only screen and (min-width: 992px) {
+  // Styles for large devices (e.g., desktops) and up
+}
+
+// Extra Large Devices and up (1200px and up)
+@media only screen and (min-width: 1200px) {
+  // Styles for extra large devices (e.g., large desktops) and up
+}
+
+// Extra Extra Large Devices (1400px and up)
+@media only screen and (min-width: 1400px) {
+  // Styles for extra extra large devices (e.g., ultra-wide screens) and up
 }

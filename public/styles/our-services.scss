@@ -1,26 +1,80 @@
 @import 'variables';
 
-.our-services-container {
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
-  margin-top: 2rem;
-}
+// Base Styles (Mobile First)
+// Default styles that apply to all devices, especially mobile.
 
 .our-service-card {
-  position: relative;
   margin-bottom: 2rem; /* Add some space between the cards */
+  display: flex;
+  flex-direction: column;
 
-  .flex-1 {
-    width: 50%; /* Split the card content and image evenly */
+  .service-title {
+    background-color: #55433a;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10rem;
   }
 
   h3 {
-    font-size: 2.5rem; /* Large text for the card titles */
+    font-size: 1.5rem; /* Slightly smaller font for mobile */
   }
 
-  /* Background styling similar to carousel cards */
-  .text-white {
-    background-color: #55433a; /* Match the background color of the carousel cards */
+  img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
   }
+}
+
+// Small Devices and up (576px and up)
+@media only screen and (min-width: 576px) {
+  // Styles for small devices (e.g., larger smartphones) and up
+}
+
+// Medium Devices and up (768px and up)
+@media only screen and (min-width: 768px) {
+  .our-service-card {
+    margin-bottom: 3rem; /* Increase space between cards */
+
+    h3 {
+      font-size: 2rem; /* Larger font for medium screens */
+    }
+
+    img {
+      height: 18rem; /* Fixed height for images on larger screens */
+    }
+  }
+}
+
+// Large Devices and up (992px and up)
+@media only screen and (min-width: 992px) {
+  .our-service-card {
+    h3 {
+      font-size: 2.5rem; /* Even larger font for large screens */
+    }
+
+    img {
+      height: 20rem; /* Slightly larger image height */
+    }
+  }
+}
+
+// Extra Large Devices and up (1200px and up)
+@media only screen and (min-width: 1200px) {
+  .our-service-card {
+    h3 {
+      font-size: 3rem; /* Maximum font size for extra large screens */
+    }
+
+    img {
+      height: 24rem; /* Maximum image height */
+    }
+  }
+}
+
+// Extra Extra Large Devices (1400px and up)
+@media only screen and (min-width: 1400px) {
+  // Additional styles for ultra-wide screens, if needed
 }

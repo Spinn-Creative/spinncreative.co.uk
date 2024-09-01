@@ -84,6 +84,10 @@ export default function Footer() {
           </ul>
         </div>
       </div>
+
+      <div className="footer-copyright">
+        Copyright &copy; 2024 <Link href="/" target='_blank'>Spinn Creative Limited</Link>. All rights reserved.
+      </div>
     </footer>
   );
 }

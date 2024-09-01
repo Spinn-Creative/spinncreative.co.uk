@@ -1,9 +1,12 @@
 @import 'variables';
 
+// Base Styles (Mobile First)
+// Default styles that apply to all devices, especially mobile.
+
 .graphics-design-hero {
   position: relative;
   width: 100%;
-  height: 70vh; /* Set the height of the hero section */
+  height: 50vh; /* Adjusted height for mobile screens */
   background-image: url('/images/page-heroes/graphics-design.png');
   background-size: cover;
   background-position: center;
@@ -19,20 +22,23 @@
 
   h1 {
     color: white;
+    font-size: 2rem; /* Adjusted font size for mobile screens */
   }
 }
 
 .graphics-design-section-container {
-  padding: 4rem 2rem;
-  max-width: 800px;
+  padding: 2rem 1rem; /* Reduced padding for mobile screens */
+  max-width: 100%; /* Full width on mobile */
   margin: 0 auto;
 
   h2 {
     color: #ff856b; /* Use a color consistent with your brand */
+    font-size: 1.75rem; /* Adjusted font size for mobile */
   }
 
   p, li {
     color: #55433a; /* Use a darker color for body text */
+    font-size: 1rem; /* Adjusted font size for mobile */
   }
 
   ul {
@@ -125,5 +131,107 @@
 
   &:hover {
     color: #ff856b;
+  }
+}
+
+// Medium Devices and up (768px and up)
+@media only screen and (min-width: 768px) {
+  .graphics-design-hero {
+    height: 60vh; /* Increase height for medium devices */
+    
+    h1 {
+      font-size: 3rem; /* Increase font size */
+    }
+  }
+
+  .graphics-design-section-container {
+    padding: 4rem 2rem;
+    max-width: 800px;
+
+    h2 {
+      font-size: 2.5rem; /* Increase font size */
+    }
+
+    p, li {
+      font-size: 1.25rem; /* Increase font size */
+    }
+  }
+
+  .graphics-design-carousel {
+    margin-top: 3rem;
+
+    .embla__slide {
+      flex: 0 0 90%; /* Increase the card width for larger screens */
+      margin: 0 5%; /* Center the card within the slide */
+    }
+
+    h3 {
+      font-size: 3rem; /* Increase card title size */
+    }
+
+    p {
+      font-size: 1.25rem; /* Increase card description size */
+    }
+  }
+}
+
+// Large Devices and up (992px and up)
+@media only screen and (min-width: 992px) {
+  .graphics-design-hero {
+    height: 70vh; /* Increase height for large devices */
+    
+    h1 {
+      font-size: 4rem; /* Further increase font size */
+    }
+  }
+
+  .graphics-design-section-container {
+    padding: 4rem 2rem;
+    max-width: 800px;
+
+    h2 {
+      font-size: 3rem; /* Further increase font size */
+    }
+
+    p, li {
+      font-size: 1.5rem; /* Further increase font size */
+    }
+  }
+
+  .graphics-design-carousel {
+    .embla__slide {
+      flex: 0 0 85%; /* Increase the card width for larger screens */
+      margin: 0 7.5%; /* Center the card within the slide */
+    }
+
+    h3 {
+      font-size: 3.5rem; /* Further increase card title size */
+    }
+
+    p {
+      font-size: 1.5rem; /* Further increase card description size */
+    }
+  }
+}
+
+// Extra Large Devices and up (1200px and up)
+@media only screen and (min-width: 1200px) {
+  .graphics-design-hero {
+    height: 80vh; /* Full height for extra-large devices */
+    
+    h1 {
+      font-size: 4.5rem; /* Maximum font size */
+    }
+  }
+}
+
+// Extra Extra Large Devices (1400px and up)
+@media only screen and (min-width: 1400px) {
+  .graphics-design-hero {
+    height: 90vh; /* Even taller hero section */
+    
+    h1 {
+      font-size: 5rem; /* Largest font size */
+    }
   }
 }

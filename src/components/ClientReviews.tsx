@@ -3,6 +3,7 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
+
 type Review = {
   name: string;
   location: string;
@@ -19,11 +20,11 @@ export default function ClientReviews() {
     fetch('https://randomuser.me/api/?results=4&nat=gb')  // Fetching 4 random users from the UK
       .then((response) => response.json())
       .then((data) => {
-        const userProfiles = data.results.map((user: any) => ({
+        const userProfiles = data.results.map((user: any, index: number) => ({
           name: `${user.name.first} ${user.name.last}`,
           location: `${user.location.city}, UK`,
           gender: user.gender,
-          rating: Math.floor(Math.random() * 2) + 4,  // Random rating between 4 and 5
+          rating: index < 2 ? 3 : Math.floor(Math.random() * 2) + 4,  // First two reviews with 3-star rating, others 4 or 5
           review: generateReview(user.gender),
           picture: user.picture.large,
         }));
@@ -36,12 +37,14 @@ export default function ClientReviews() {
       "Spinn Creative truly captured our brand's essence with their designs. Exceptional work!",
       "Their attention to detail and creativity exceeded our expectations. Highly recommended!",
       "A fantastic experience from start to finish. The team was professional and delivered quality results.",
+      "Good, but there is room for improvement.",
     ];
 
     const femaleReviews = [
       "The team at Spinn Creative brought our vision to life with stunning visuals. We couldn’t be happier!",
       "Impressed by the professionalism and creativity. The final product was beyond our expectations.",
       "Outstanding service and beautiful designs. They made the process seamless and enjoyable.",
+      "It was okay, but I expected a bit more.",
     ];
 
     const reviews = gender === 'male' ? maleReviews : femaleReviews;
@@ -63,16 +66,16 @@ export default function ClientReviews() {
   };
 
   return (
-    <section className="my-16 container mx-auto text-center bg-white py-12">
-      <h2 className="text-4xl font-bold mb-12 text-[#ff856b]">What Clients Are Saying</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <section className="client-reviews my-16 container mx-auto text-center bg-white py-12">
+      <h2 className="section-title">What Clients Are Saying</h2>
+      <div className="reviews-grid">
         {reviews.map((review, index) => (
           <div
             key={index}
-            className="bg-black p-6 rounded-lg shadow-lg hover:shadow-2xl transition-shadow duration-300"
+            className="review-card"
           >
-            <div className="flex flex-col items-center mb-4">
-              <div className="rounded-full overflow-hidden w-24 h-24 mb-4 border-4 border-[#ff856b]">
+            <div className="reviewer-info">
+              <div className="reviewer-picture">
                 <Image
                   src={review.picture}
                   alt={review.name}
@@ -81,11 +84,11 @@ export default function ClientReviews() {
                   className="object-cover"
                 />
               </div>
-              <h3 className="text-xl font-semibold text-white">{review.name}</h3>
-              <p className="text-sm text-[#dac8be]">{review.location}</p>
-              <div className="flex mt-2">{renderStars(review.rating)}</div>
+              <h3 className="reviewer-name">{review.name}</h3>
+              <p className="reviewer-location">{review.location}</p>
+              <div className="reviewer-rating">{renderStars(review.rating)}</div>
             </div>
-            <p className="text-[#dac8be] text-sm italic">"{review.review}"</p>
+            <p className="review-text">"{review.review}"</p>
           </div>
         ))}
       </div>

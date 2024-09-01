@@ -1,0 +1,136 @@
+@import 'variables';
+
+.jumbotron-section {
+  padding: 3rem 0;  // Reduced padding for mobile
+
+  .jumbotron-container {
+    background-color: #55433a;
+    color: white;
+    padding: 4rem 1.5rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    .jumbotron-title {
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      color: inherit;  // Keep the original text color
+    }
+
+    .jumbotron-text {
+      font-size: 1.25rem;
+      margin-bottom: 2.5rem;
+      color: inherit;  // Keep the original text color
+    }
+
+    .jumbotron-button {
+      background-color: #ff856b;
+      color: white;
+      font-size: 1.125rem;
+      padding: 1rem 2.5rem;
+      border-radius: 0.375rem;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #ff6749;
+      }
+    }
+  }
+}
+
+// Medium Devices and up (768px and up)
+@media (min-width: 768px) {
+  .jumbotron-section {
+    padding: 6rem 0;  // Increased padding for larger screens
+
+    .jumbotron-container {
+      padding: 5rem 3rem;
+
+      .jumbotron-title {
+        font-size: 3rem;
+      }
+
+      .jumbotron-text {
+        font-size: 1.5rem;
+      }
+
+      .jumbotron-button {
+        font-size: 1.25rem;
+        padding: 1.25rem 3rem;
+      }
+    }
+  }
+}
+
+// Large Devices and up (992px and up)
+@media (min-width: 992px) {
+  .jumbotron-section {
+    padding: 8rem 0;  // Further increase padding on large screens
+
+    .jumbotron-container {
+      padding: 6rem 4rem;
+
+      .jumbotron-title {
+        font-size: 3.5rem;
+      }
+
+      .jumbotron-text {
+        font-size: 1.75rem;
+      }
+
+      .jumbotron-button {
+        font-size: 1.5rem;
+        padding: 1.5rem 3.5rem;
+      }
+    }
+  }
+}
+
+// Extra Large Devices and up (1200px and up)
+@media (min-width: 1200px) {
+  .jumbotron-section {
+    padding: 10rem 0;
+
+    .jumbotron-container {
+      padding: 7rem 5rem;
+
+      .jumbotron-title {
+        font-size: 4rem;
+      }
+
+      .jumbotron-text {
+        font-size: 2rem;
+      }
+
+      .jumbotron-button {
+        font-size: 1.75rem;
+        padding: 1.75rem 4rem;
+      }
+    }
+  }
+}
+
+// Extra Extra Large Devices (1400px and up)
+@media (min-width: 1400px) {
+  .jumbotron-section {
+    padding: 12rem 0;
+
+    .jumbotron-container {
+      padding: 8rem 6rem;
+
+      .jumbotron-title {
+        font-size: 4.5rem;
+      }
+
+      .jumbotron-text {
+        font-size: 2.25rem;
+      }
+
+      .jumbotron-button {
+        font-size: 2rem;
+        padding: 2rem 4.5rem;
+      }
+    }
+  }
+}

@@ -1,22 +1,19 @@
 @import 'variables';
 
+// Base Styles (Mobile First)
+// Default styles that apply to all devices, especially mobile.
+
 .navbar {
-  height: $navbar-height; // Set the height for the navbar
+  height: $navbar-height;
 
   .logo {
     display: flex;
     align-items: center;
     height: 100%; // Ensure the logo container takes full height of the navbar
 
-    .relative {
-      height: 80%; // Adjust the logo to be 80% of the navbar height
-      display: flex;
-      align-items: center;
-    }
-
     img {
-      height: auto; // Ensure the image maintains its aspect ratio
-      width: auto; // Responsive width based on the container
+      height: auto;
+      width: auto;
       max-height: 100%; // Ensure it doesn't exceed the container height
     }
   }
@@ -25,23 +22,80 @@
     cursor: pointer;
   }
 
-  ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white; // Ensure the dropdown is distinct on mobile
+    z-index: 20; // Ensure the dropdown is above other elements
+    transition: all 0.3s ease;
+    display: none; // Hide the menu by default on mobile
 
-    @media (min-width: 768px) {
-      flex-direction: row;
-      gap: 2rem;
+    &.block {
+      display: block; // Show menu when it's toggled on mobile
     }
 
-    li {
-      &:hover {
-        color: #ff856b; // Use #ff856b for the hover effect
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+
+      li {
+        width: 100%; // Take full width in mobile view for better tap targets
+        text-align: left;
+
+        &:hover {
+          color: #ff856b; // Use #ff856b for the hover effect
+        }
       }
     }
   }
+}
+
+// Small Devices and up (576px and up)
+@media only screen and (min-width: 576px) {
+  // Styles for small devices (e.g., larger smartphones) and up
+}
+
+// Medium Devices and up (768px and up)
+@media only screen and (min-width: 768px) {
+  .navbar {
+    .menu {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      background-color: transparent;
+      z-index: auto; // Reset z-index for larger screens
+      display: block; // Ensure the menu is always visible on desktop
+
+      ul {
+        flex-direction: row; // Revert to horizontal layout on desktop
+        gap: 2rem; // Add spacing between menu items
+
+        li {
+          width: auto; // Revert to auto width for menu items on larger screens
+        }
+      }
+    }
+  }
+}
+
+// Large Devices and up (992px and up)
+@media only screen and (min-width: 992px) {
+  // Additional styles for large devices if needed
+}
+
+// Extra Large Devices and up (1200px and up)
+@media only screen and (min-width: 1200px) {
+  // Additional styles for extra-large devices if needed
+}
+
+// Extra Extra Large Devices (1400px and up)
+@media only screen and (min-width: 1400px) {
+  // Additional styles for ultra-wide screens if needed
 }

@@ -6,12 +6,14 @@ import Link from 'next/link';
 import Logo from '/public/images/logo.png'; // Adjust the path
 
 export default function Navbar() {
-  // State to manage the burger menu open/close
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  // Function to toggle the menu
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const closeMenu = () => {
+    setIsMenuOpen(false);
   };
 
   return (
@@ -24,8 +26,8 @@ export default function Navbar() {
             alt='Logo'
             sizes='100vw'
             style={{
-              width: 'auto', // Adjust width to fit within its container
-              height: '50px', // Define a height smaller than the navbar
+              width: 'auto',
+              height: '50px',
             }}
           />
         </Link>
@@ -75,33 +77,33 @@ export default function Navbar() {
 
       {/* Menu Items */}
       <div
-        className={`${
+        className={`menu ${
           isMenuOpen ? 'block' : 'hidden'
-        } absolute top-full left-0 w-full bg-white md:relative md:flex md:w-auto md:top-0 md:bg-transparent`}
+        } md:block absolute md:relative top-full left-0 w-full bg-white md:w-auto md:bg-transparent`}
       >
         <ul className='flex flex-col md:flex-row items-start md:items-center p-4 md:p-0 md:gap-8'>
           <li className='py-2 md:py-0 hover:text-[#ff856b]'>
-            <Link href='/about-us'>
+            <Link href='/about-us' onClick={closeMenu}>
               <span>About us</span>
             </Link>
           </li>
           <li className='py-2 md:py-0 hover:text-[#ff856b]'>
-            <Link href='/graphics-design'>
+            <Link href='/graphics-design' onClick={closeMenu}>
               <span>Graphics Design</span>
             </Link>
           </li>
           <li className='py-2 md:py-0 hover:text-[#ff856b]'>
-            <Link href='/3d-modelling'>
+            <Link href='/3d-modelling' onClick={closeMenu}>
               <span>3D Modelling</span>
             </Link>
           </li>
           <li className='py-2 md:py-0 hover:text-[#ff856b]'>
-            <Link href='/animation'>
+            <Link href='/animation' onClick={closeMenu}>
               <span>Animation</span>
             </Link>
           </li>
           <li className='py-2 md:py-0 hover:text-[#ff856b]'>
-            <Link href='/contact-us'>
+            <Link href='/contact-us' onClick={closeMenu}>
               <span>Contact us</span>
             </Link>
           </li>

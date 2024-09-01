@@ -1,42 +1,117 @@
 @import 'variables';
 
+// Base Styles (Mobile First)
+// Default styles that apply to all devices, especially mobile.
+
 .terms-hero {
-    position: relative;
-    width: 100%;
-    height: 70vh; /* Set the height of the hero section */
-    background-image: url('/images/page-heroes/terms-of-use.jpg');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    .terms-hero-overlay {
-      background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
-      padding: 2rem;
-      border-radius: 0.5rem;
-    }
-  
-    h1 {
-      color: white;
+  position: relative;
+  width: 100%;
+  height: 50vh; /* Adjusted height for mobile screens */
+  background-image: url('/images/page-heroes/terms-of-use.jpg');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .terms-hero-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+    padding: 2rem;
+    border-radius: 0.5rem;
+  }
+
+  h1 {
+    color: white;
+    font-size: 2rem; /* Adjusted font size for mobile screens */
+  }
+}
+
+.terms-section-container {
+  padding: 2rem 1rem; /* Reduced padding for mobile screens */
+  max-width: 100%; /* Full width on mobile */
+  margin: 0 auto;
+
+  h2 {
+    color: #ff856b; /* Use a color consistent with your brand */
+    font-size: 1.75rem; /* Adjusted font size for mobile */
+  }
+
+  p {
+    color: #55433a; /* Use a darker color for body text */
+    font-size: 1rem; /* Adjusted font size for mobile */
+
+    &.text-gray-500 {
+      color: #888888; /* Muted color for the Last Updated text */
     }
   }
-  
+}
+
+// Medium Devices and up (768px and up)
+@media only screen and (min-width: 768px) {
+  .terms-hero {
+    height: 60vh; /* Increase height for medium devices */
+    
+    h1 {
+      font-size: 3rem; /* Increase font size */
+    }
+  }
+
   .terms-section-container {
     padding: 4rem 2rem;
     max-width: 800px;
-    margin: 0 auto;
-  
+
     h2 {
-      color: #ff856b; /* Use a color consistent with your brand */
+      font-size: 2.5rem; /* Increase font size */
     }
-  
+
     p {
-      color: #55433a; /* Use a darker color for body text */
-  
-      &.text-gray-500 {
-        color: #888888; /* Muted color for the Last Updated text */
-      }
+      font-size: 1.25rem; /* Increase font size */
     }
   }
-  
+}
+
+// Large Devices and up (992px and up)
+@media only screen and (min-width: 992px) {
+  .terms-hero {
+    height: 70vh; /* Increase height for large devices */
+    
+    h1 {
+      font-size: 4rem; /* Further increase font size */
+    }
+  }
+
+  .terms-section-container {
+    padding: 4rem 2rem;
+    max-width: 800px;
+
+    h2 {
+      font-size: 3rem; /* Further increase font size */
+    }
+
+    p {
+      font-size: 1.5rem; /* Further increase font size */
+    }
+  }
+}
+
+// Extra Large Devices and up (1200px and up)
+@media only screen and (min-width: 1200px) {
+  .terms-hero {
+    height: 80vh; /* Full height for extra-large devices */
+    
+    h1 {
+      font-size: 4.5rem; /* Maximum font size */
+    }
+  }
+}
+
+// Extra Extra Large Devices (1400px and up)
+@media only screen and (min-width: 1400px) {
+  .terms-hero {
+    height: 90vh; /* Even taller hero section */
+    
+    h1 {
+      font-size: 5rem; /* Largest font size */
+    }
+  }
+}

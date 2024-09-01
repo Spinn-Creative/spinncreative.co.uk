@@ -7,6 +7,10 @@ const config: Config = {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      padding: '.7rem',
+      center: true,
+    },
     colors: {
       'sc-tan': '#dac8be',
       'sc-brown': '#55433a',
