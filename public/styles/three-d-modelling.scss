@@ -1,9 +1,8 @@
-@import 'variables';
-
+/* Base Styles (Mobile First) */
 .three-d-hero {
   position: relative;
   width: 100%;
-  height: 70vh; /* Same height as the Animation hero section */
+  height: 50vh;
   background-image: url('/images/page-heroes/3d-modelling.png');
   background-size: cover;
   background-position: center;
@@ -13,105 +12,84 @@
 
   .three-d-hero-overlay {
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 2rem;
+    padding: 1.5rem;
     border-radius: 0.5rem;
   }
 
   h1 {
     color: white;
+    font-size: 2rem;
   }
-}
-
-.three-d-section-container {
-  padding: 4rem 2rem;
-  max-width: 800px;
-  margin: 0 auto;
-
-  h2 {
-    color: #ff856b;
-  }
-
-  p, li {
-    color: #55433a;
-  }
-
-  ul {
-    padding-left: 1.5rem;
-  }
-}
-
-.full-width-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 4rem 0;
-}
-
-.image-text-pair {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-}
-
-.image-side {
-  flex: 1;
-  max-width: 50%;
-}
-
-.image-side img {
-  width: 100%; /* Ensure images fill the container */
-  height: auto;
-  object-fit: cover; /* Ensure images behave like videos */
-  border-radius: 0; /* Reset border-radius */
-
-  /* Apply rounding to the correct corners based on image position */
-  &.rounded-r-lg {
-    border-top-right-radius: 1rem;
-    border-bottom-right-radius: 1rem;
-  }
-
-  &.rounded-l-lg {
-    border-top-left-radius: 1rem;
-    border-bottom-left-radius: 1rem;
-  }
-
-  aspect-ratio: 16/9; /* Match typical video aspect ratio */
-}
-
-.text-side {
-  flex: 1;
-  max-width: 50%;
-  padding: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.text-content {
-  text-align: left;
-  max-width: 100%;
-}
-
-h3 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  position: relative;
 }
 
 .decorative-line {
   width: 50px;
   height: 5px;
   background-color: #ff856b;
-  margin: 10px 0 20px 0;
+  margin: 10px auto 20px auto;
+}
+
+.image-text-pair {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+  }
+}
+
+.image-side {
+  width: 100%;
+  margin-bottom: 1rem;
+
+  @media (min-width: 768px) {
+    margin-bottom: 0;
+  }
+}
+
+.text-side {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text-content {
+  text-align: center;
+
+  @media (min-width: 768px) {
+    text-align: left;
+  }
+}
+
+h3 {
+  font-size: 2rem;
+  font-weight: bold;
+  position: relative;
+
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 3rem;
+  }
 }
 
 p {
+  font-size: 1rem;
   color: #555555;
   margin-top: 1rem;
-}
 
-p strong {
-  color: #333333;
+  @media (min-width: 768px) {
+    font-size: 1.125rem;
+  }
+
+  @media (min-width: 992px) {
+    font-size: 1.25rem;
+  }
 }
 
 .btn-outline {
@@ -125,5 +103,30 @@ p strong {
 
   &:hover {
     color: #ff856b;
+  }
+}
+
+/* Large Devices and up (992px and up) */
+@media only screen and (min-width: 992px) {
+  .full-width-section {
+    padding: 4rem 0;
+  }
+
+  h1 {
+    font-size: 4rem;
+  }
+}
+
+/* Extra Large Devices and up (1200px and up) */
+@media only screen and (min-width: 1200px) {
+  h1 {
+    font-size: 4.5rem;
+  }
+}
+
+/* Extra Extra Large Devices and up (1400px and up) */
+@media only screen and (min-width: 1400px) {
+  h1 {
+    font-size: 5rem;
   }
 }
