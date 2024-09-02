@@ -34,8 +34,8 @@ export const metadata: Metadata = {
     url: 'https://www.spinncreative.co.uk',
     images: [
       {
-        url: '',
-        alt: '',
+        url: 'https://www.spinncreative.co.uk/images/meta-image.jpg',
+        alt: 'Spinn Creative Meta Image',
       }
     ],
     locale: 'en_GB',
@@ -46,7 +46,7 @@ export const metadata: Metadata = {
     title: 'Spinn Creative',
     description: 'Spinn Creative is a business-to-business creative agency in the UK, bringing cutting edge creative solutions to the commercial sector.',
     images: [
-      '', //absolute url
+      'https://www.spinncreative.co.uk/images/meta-image.jpg',
     ],
   },
 };

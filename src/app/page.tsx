@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Hero from '@/components/Hero';
 import OurServices from '@/components/OurServices';
-import ClientReviews from "@/components/ClientReviews";
 import Jumbotron from "@/components/Jumbotron";
 
 export default function Home() {
@@ -9,7 +8,6 @@ export default function Home() {
     <>
     <Hero />
     <OurServices />
-    <ClientReviews />
     <Jumbotron />
     </>
   );
