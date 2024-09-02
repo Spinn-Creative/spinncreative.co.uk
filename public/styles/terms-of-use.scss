@@ -97,7 +97,7 @@
 // Extra Large Devices and up (1200px and up)
 @media only screen and (min-width: 1200px) {
   .terms-hero {
-    height: 80vh; /* Full height for extra-large devices */
+    //height: 80vh; /* Full height for extra-large devices */
     
     h1 {
       font-size: 4.5rem; /* Maximum font size */
@@ -108,7 +108,7 @@
 // Extra Extra Large Devices (1400px and up)
 @media only screen and (min-width: 1400px) {
   .terms-hero {
-    height: 90vh; /* Even taller hero section */
+    //height: 90vh; /* Even taller hero section */
     
     h1 {
       font-size: 5rem; /* Largest font size */

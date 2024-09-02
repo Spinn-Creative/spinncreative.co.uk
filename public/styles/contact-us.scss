@@ -3,8 +3,8 @@
 .contact-us-hero {
   position: relative;
   width: 100%;
-  height: 60vh; /* Adjusted for mobile responsiveness */
-  background-image: url('/images/page-heroes/contact-us.jpg');
+  height: 50vh; /* Adjusted for mobile responsiveness */
+  background-image: url('/images/page-heroes/contact-us-hero.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -82,7 +82,7 @@
 // Medium Devices and up (768px and up)
 @media only screen and (min-width: 768px) {
   .contact-us-hero {
-    height: 70vh;
+    height: 60vh;
   }
 
   .contact-us-section-container {
@@ -102,6 +102,6 @@
 // Large Devices and up (992px and up)
 @media only screen and (min-width: 992px) {
   .contact-us-hero {
-    height: 80vh;
+    height: 70vh;
   }
 }

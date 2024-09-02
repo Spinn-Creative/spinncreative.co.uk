@@ -88,8 +88,8 @@ export default function Navbar() {
             </Link>
           </li>
           <li className='py-2 md:py-0 hover:text-[#ff856b]'>
-            <Link href='/graphics-design' onClick={closeMenu}>
-              <span>Graphics Design</span>
+            <Link href='/graphics' onClick={closeMenu}>
+              <span>Graphics</span>
             </Link>
           </li>
           <li className='py-2 md:py-0 hover:text-[#ff856b]'>

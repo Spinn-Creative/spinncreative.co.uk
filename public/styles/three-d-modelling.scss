@@ -130,3 +130,16 @@ p {
     font-size: 5rem;
   }
 }
+
+
+@media (min-width: 768px) {
+  .three-d-hero {
+    height: 60vh;
+  }
+}
+
+@media (min-width: 992px) {
+  .three-d-hero {
+    height: 70vh;
+  }
+}
