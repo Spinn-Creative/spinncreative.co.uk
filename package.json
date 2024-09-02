@@ -1,12 +1,30 @@
 {
-  "name": "wmnell.com",
+  "name": "spinncreative.co.uk",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "type-check": "tsc --noEmit",
+    "dev": "concurrently \"npm run test:watch\" \"next dev\"",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "lint-staged": "lint-staged",
+    "prepare": "husky",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:watch-all": "nodemon --exec 'npm run test' --watch src --watch tests --ext js,jsx, ts,tsx"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.ts": "eslint --fix",
+    "*.tsx": "eslint --fix",
+    "*.js": "eslint --fix",
+    "*.jsx": "eslint --fix",
+    "*.json": "prettier --write"
   },
   "dependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
@@ -24,16 +42,25 @@
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.8",
     "@tailwindcss/typography": "^0.5.15",
+    "@types/jest": "^29.5.12",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "@typescript-eslint/eslint-plugin": "^8.3.0",
+    "@typescript-eslint/parser": "^8.3.0",
+    "concurrently": "^8.2.2",
     "eslint": "^8",
     "eslint-config-next": "14.2.5",
     "eslint-config-prettier": "^9.1.0",
+    "husky": "^9.1.5",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.10",
+    "nodemon": "^3.1.4",
     "postcss": "^8",
     "prettier": "3.3.3",
     "sass": "^1.77.8",
     "tailwindcss": "^3.4.1",
+    "ts-jest": "^29.2.5",
     "typescript": "^5"
   }
 }

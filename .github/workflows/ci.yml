@@ -3,28 +3,51 @@
 name: Node.js CI
 
 on:
-  push:
-    branches: [ "development" ]
-  pull_request:
-    branches: [ "development" ]
+    push:
+        branches:
+            - 'development'
+            - 'production'
+    pull_request:
+        branches:
+            - 'development'
+            - 'production'
 
 jobs:
-  build:
-    runs-on: ubuntu-latest
+    build:
+        runs-on: ubuntu-latest
 
-    strategy:
-      matrix:
-        node-version: [22.x]
-        # Node.js version 22.x only
+        strategy:
+            matrix:
+                node-version: [22.x]
+                # Node.js version 22.x only
 
-    steps:
-      - uses: actions/checkout@v4 # Latest stable version of actions/checkout
-      - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v4 # Latest stable version of actions/setup-node
-        with:
-          node-version: ${{ matrix.node-version }}
-          cache: 'npm'
-      - run: node -v # Confirm the Node.js version
-      - run: npm cache clean --force # Clear npm cache
-      - run: npm ci --loglevel verbose # Install dependencies with verbose logging
-      - run: npm run build --loglevel verbose # Build the project with verbose logging
+        steps:
+            - uses: actions/checkout@v4 # Latest stable version of actions/checkout
+
+            - name: Use Node.js ${{ matrix.node-version }}
+              uses: actions/setup-node@v4 # Latest stable version of actions/setup-node
+              with:
+                  node-version: ${{ matrix.node-version }}
+                  cache: 'npm'
+
+            - name: Cache .next directory
+              uses: actions/cache@v3
+              with:
+                  path: .next/cache
+                  key: ${{ runner.os }}-nextjs-${{ hashFiles('**/*') }}
+                  restore-keys: |
+                      ${{ runner.os }}-nextjs-
+
+            - run: node -v # Confirm the Node.js version
+
+            - run: npm cache clean --force # Clear npm cache
+
+            - run: npm ci --loglevel verbose # Install dependencies with verbose logging
+
+            - name: Run lint # Add linting step
+              run: npm run lint
+
+            - name: Run type check # Add type-checking step
+              run: npm run type-check
+
+            - run: npm run build --loglevel verbose # Build the project with verbose logging

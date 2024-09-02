@@ -10,8 +10,8 @@ export async function POST(request: Request) {
     port: Number(process.env.SMTP_PORT), // Typically 587 for TLS, 465 for SSL
     secure: process.env.SMTP_PORT === '465', // true for 465, false for other ports
     auth: {
-      user: process.env.EMAIL_USER, // Your email address
-      pass: process.env.EMAIL_PASS, // Your email password or app-specific password
+      user: process.env.USERNAME, // Username for relay service
+      pass: process.env.PASSWORD, // Password for relay service
     },
   });
 

@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
 
 export default function ContactUs() {
   const [formData, setFormData] = useState({
@@ -11,11 +11,13 @@ export default function ContactUs() {
 
   const [status, setStatus] = useState('');
 
-  const handleChange = (e) => {
+  // Define the type for the event 'e'
+  const handleChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  // Define the type for the event 'e' in handleSubmit
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setStatus('Sending...');
 
