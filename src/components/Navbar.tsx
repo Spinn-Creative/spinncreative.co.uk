@@ -17,7 +17,7 @@ export default function Navbar() {
   };
 
   return (
-    <nav className='navbar relative flex items-center justify-between px-4 py-2 md:px-8'>
+    <nav className='navbar relative flex items-center justify-between py-2 md:px-8'>
       {/* Logo section */}
       <div className='logo flex items-center'>
         <Link href='/'>
@@ -77,7 +77,7 @@ export default function Navbar() {
 
       {/* Menu Items */}
       <div
-        className={`menu ${
+        className={`container menu ${
           isMenuOpen ? 'block' : 'hidden'
         } md:block absolute md:relative top-full left-0 w-full bg-white md:w-auto md:bg-transparent`}
       >
