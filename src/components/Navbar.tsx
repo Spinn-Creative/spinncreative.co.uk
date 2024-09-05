@@ -5,14 +5,15 @@ import Image from 'next/image';
 import Link from 'next/link';
 import Logo from '/public/images/logo.png'; // Adjust the path
 
-export default function Navbar() {
+export default function Navbar(): JSX.Element {
+    // Added the return type
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-    const toggleMenu = () => {
+    const toggleMenu = (): void => {
         setIsMenuOpen(!isMenuOpen);
     };
 
-    const closeMenu = () => {
+    const closeMenu = (): void => {
         setIsMenuOpen(false);
     };
 

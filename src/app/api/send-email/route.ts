@@ -1,7 +1,7 @@
 import { NextResponse } from 'next/server';
 import nodemailer from 'nodemailer';
 
-export async function POST(request: Request) {
+export async function POST(request: Request): Promise<NextResponse> {
   const { name, email, message } = await request.json();
 
   // Create the transporter with your email provider's SMTP server
@@ -19,7 +19,7 @@ export async function POST(request: Request) {
     // Send the email
     await transporter.sendMail({
       from: 'noreply@spinncreative.co.uk', // Must be a verified email with your SMTP provider
-      to: 'hello@spinncreative.co.uk', // receiver email address
+      to: 'hello@spinncreative.co.uk', // Receiver email address
       replyTo: email, // User's email as the reply-to address
       subject: 'New Contact Form Submission', // Subject line
       html: `
@@ -30,9 +30,15 @@ export async function POST(request: Request) {
       `,
     });
 
-    return NextResponse.json({ message: 'Your message has been sent successfully.' }, { status: 200 });
+    return NextResponse.json(
+      { message: 'Your message has been sent successfully.' },
+      { status: 200 }
+    );
   } catch (error) {
     console.error('Error sending email:', error);
-    return NextResponse.json({ message: 'Your message has not been sent.' }, { status: 500 });
+    return NextResponse.json(
+      { message: 'Your message has not been sent.' },
+      { status: 500 }
+    );
   }
 }
