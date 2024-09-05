@@ -1,0 +1,11 @@
+# Run linter
+npm run lint
+
+# Lint staged files only
+npx lint-staged
+
+# Run type checks
+npm run type-check
+
+# Run tests
+npm run test

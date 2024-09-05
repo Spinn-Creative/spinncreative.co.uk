@@ -20,11 +20,10 @@
     }
   },
   "lint-staged": {
-    "*.ts": "eslint --fix",
-    "*.tsx": "eslint --fix",
     "*.js": "eslint --fix",
     "*.jsx": "eslint --fix",
-    "*.json": "prettier --write"
+    "*.ts": "eslint --fix",
+    "*.tsx": "eslint --fix"
   },
   "dependencies": {
     "@tailwindcss/container-queries": "^0.1.1",
