@@ -1,7 +1,4 @@
-# Run linter
-npm run lint
-
-# Lint staged files only
+# Lint staged files
 npx lint-staged
 
 # Run type checks

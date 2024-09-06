@@ -20,7 +20,7 @@ export default function Graphics(): JSX.Element {
         },
         {
             title: 'Transform Your Ideas into Stunning Visuals',
-            description: `Our graphics design process is collaborative and client-focused. We work closely with you to understand your brand, your goals, and your audience, ensuring that every design we create is not just beautiful but also effective.`,
+            description: 'Our graphics design process is collaborative and client-focused. We work closely with you to understand your brand, your goals, and your audience, ensuring that every design we create is not just beautiful but also effective.',
             image: '/images/gamer.png',
         },
     ];
