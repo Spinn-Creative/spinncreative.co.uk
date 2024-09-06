@@ -1,8 +1,7 @@
 {
-  "editor.formatOnSave": true,
+  "editor.formatOnSave": false,
   "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "always",
-    "source.fixAll.tslint": "always"
+    "source.fixAll.eslint": "always"
   },
   "eslint.validate": [
     "javascript",

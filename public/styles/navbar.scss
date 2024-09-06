@@ -4,98 +4,98 @@
 // Default styles that apply to all devices, especially mobile.
 
 .navbar {
-    height: $navbar-height;
+  height: $navbar-height;
 
-    .logo {
-        display: flex;
-        align-items: center;
-        height: 100%; // Ensure the logo container takes full height of the navbar
+  .logo {
+    display: flex;
+    align-items: center;
+    height: 100%; // Ensure the logo container takes full height of the navbar
 
-        img {
-            height: auto;
-            width: auto;
-            max-height: 100%; // Ensure it doesn't exceed the container height
-        }
+    img {
+      height: auto;
+      width: auto;
+      max-height: 100%; // Ensure it doesn't exceed the container height
+    }
+  }
+
+  .burger-menu {
+    cursor: pointer;
+  }
+
+  .menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: white; // Ensure the dropdown is distinct on mobile
+    z-index: 20; // Ensure the dropdown is above other elements
+    transition: all 0.3s ease;
+    display: none; // Hide the menu by default on mobile
+
+    &.block {
+      display: block; // Show menu when it's toggled on mobile
     }
 
-    .burger-menu {
-        cursor: pointer;
-    }
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
 
-    .menu {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        background-color: white; // Ensure the dropdown is distinct on mobile
-        z-index: 20; // Ensure the dropdown is above other elements
-        transition: all 0.3s ease;
-        display: none; // Hide the menu by default on mobile
+      li {
+        width: 100%; // Take full width in mobile view for better tap targets
+        text-align: left;
 
-        &.block {
-            display: block; // Show menu when it's toggled on mobile
+        &:hover {
+          color: #ff856b; // Use #ff856b for the hover effect
         }
-
-        ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            flex-direction: column;
-            gap: 0.5rem;
-
-            li {
-                width: 100%; // Take full width in mobile view for better tap targets
-                text-align: left;
-
-                &:hover {
-                    color: #ff856b; // Use #ff856b for the hover effect
-                }
-            }
-        }
+      }
     }
+  }
 }
 
 // Small Devices and up (576px and up)
 @media only screen and (min-width: 576px) {
-    // Styles for small devices (e.g., larger smartphones) and up
+  // Styles for small devices (e.g., larger smartphones) and up
 }
 
 // Medium Devices and up (768px and up)
 @media only screen and (min-width: 768px) {
-    .navbar {
-        .menu {
-            position: relative;
-            top: auto;
-            left: auto;
-            width: auto;
-            background-color: transparent;
-            z-index: auto; // Reset z-index for larger screens
-            display: block; // Ensure the menu is always visible on desktop
+  .navbar {
+    .menu {
+      position: relative;
+      top: auto;
+      left: auto;
+      width: auto;
+      background-color: transparent;
+      z-index: auto; // Reset z-index for larger screens
+      display: block; // Ensure the menu is always visible on desktop
 
-            ul {
-                flex-direction: row; // Revert to horizontal layout on desktop
-                gap: 2rem; // Add spacing between menu items
+      ul {
+        flex-direction: row; // Revert to horizontal layout on desktop
+        gap: 2rem; // Add spacing between menu items
 
-                li {
-                    width: auto; // Revert to auto width for menu items on larger screens
-                }
-            }
+        li {
+          width: auto; // Revert to auto width for menu items on larger screens
         }
+      }
     }
+  }
 }
 
 // Large Devices and up (992px and up)
 @media only screen and (min-width: 992px) {
-    // Additional styles for large devices if needed
+  // Additional styles for large devices if needed
 }
 
 // Extra Large Devices and up (1200px and up)
 @media only screen and (min-width: 1200px) {
-    // Additional styles for extra-large devices if needed
+  // Additional styles for extra-large devices if needed
 }
 
 // Extra Extra Large Devices (1400px and up)
 @media only screen and (min-width: 1400px) {
-    // Additional styles for ultra-wide screens if needed
+  // Additional styles for ultra-wide screens if needed
 }
