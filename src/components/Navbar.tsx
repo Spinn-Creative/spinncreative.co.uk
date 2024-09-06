@@ -77,32 +77,32 @@ export default function Navbar(): JSX.Element {
 
       {/* Menu Items */}
       <div
-        className={`container menu ${
+        className={`menu ${
           isMenuOpen ? 'block' : 'hidden'
         } md:block absolute md:relative top-full left-0 w-full bg-white md:w-auto md:bg-transparent`}
       >
         <ul className='flex flex-col md:flex-row items-start md:items-center p-4 md:p-0 md:gap-8'>
-          <li className='py-2 md:py-0 hover:text-[#ff856b]'>
+          <li className='py-2 px-2 md:py-0 hover:text-[#ff856b]'>
             <Link href='/about-us' onClick={closeMenu}>
               <span>About us</span>
             </Link>
           </li>
-          <li className='py-2 md:py-0 hover:text-[#ff856b]'>
+          <li className='py-2 px-2 md:py-0 hover:text-[#ff856b]'>
             <Link href='/graphics' onClick={closeMenu}>
               <span>Graphics</span>
             </Link>
           </li>
-          <li className='py-2 md:py-0 hover:text-[#ff856b]'>
+          <li className='py-2 px-2 md:py-0 hover:text-[#ff856b]'>
             <Link href='/3d-modelling' onClick={closeMenu}>
               <span>3D Modelling</span>
             </Link>
           </li>
-          <li className='py-2 md:py-0 hover:text-[#ff856b]'>
+          <li className='py-2 px-2 md:py-0 hover:text-[#ff856b]'>
             <Link href='/animation' onClick={closeMenu}>
               <span>Animation</span>
             </Link>
           </li>
-          <li className='py-2 md:py-0 hover:text-[#ff856b]'>
+          <li className='py-2 px-2 md:py-0 hover:text-[#ff856b]'>
             <Link href='/contact-us' onClick={closeMenu}>
               <span>Contact us</span>
             </Link>
