@@ -1,166 +1,97 @@
-'use client';
+// pages/contact-us.tsx (Server-Side Component)
+import ContactForm from '@/components/ContactForm';
+import { Facebook, Instagram, Youtube } from 'react-feather';
+import Link from 'next/link';
+import type { Metadata } from 'next';
+import { title } from '../layout';
 
-import React, { useState, useEffect, ChangeEvent, FormEvent } from 'react';
+export const metadata: Metadata = {
+  title: `${title} - Contact us`,
+  description:
+      'Get in touch with us now and let us help you bring your vision to life with our expert design services.',
+  alternates: {
+      canonical: 'https://www.spinncreative.co.uk/contact-us',
+  },
+};
 
-export default function ContactUs(): JSX.Element {
-    const [formData, setFormData] = useState({
-        name: '',
-        email: '',
-        message: '',
-    });
-
-    const [status, setStatus] = useState('');
-
-    // Define the type for the event 'e'
-    const handleChange = (
-        e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-    ): void => {
-        setFormData({ ...formData, [e.target.name]: e.target.value });
-    };
-
-    // Define the type for the event 'e' in handleSubmit
-    const handleSubmit = async (
-        e: FormEvent<HTMLFormElement>
-    ): Promise<void> => {
-        e.preventDefault();
-        setStatus('Sending...');
-
-        try {
-            const response = await fetch('/api/send-email', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(formData),
-            });
-
-            if (response.ok) {
-                setStatus('Your message has been sent successfully.');
-                setFormData({ name: '', email: '', message: '' });
-            } else {
-                setStatus('Your message has not been sent.');
-            }
-        } catch (error) {
-            console.error('Error submitting form:', error);
-            setStatus('Your message has not been sent.');
-        }
-    };
-
-    useEffect(() => {
-        if (status) {
-            const timer = setTimeout(() => {
-                setStatus('');
-            }, 10000);
-
-            // Return cleanup function
-            return (): void => clearTimeout(timer);
-        }
-    }, [status]);
-
-    return (
-        <div>
-            <section className="contact-us-hero flex items-center justify-center text-center">
-                <div className="contact-us-hero-overlay">
-                    <h1 className="text-6xl font-bold text-white">
-                        Contact us
-                    </h1>
-                </div>
-            </section>
-
-            <section className="contact-us-section-container">
-                <h2 className="text-4xl font-bold mb-4">Get in touch</h2>
-                <p className="text-lg mb-6">
-                    Ready to start a project or just want to learn more about
-                    what we can do for you? We'd love to hear from you! At Spinn
-                    Creative, we're always excited to collaborate on creative
-                    projects, big or small.
-                </p>
-
-                <div className="text-lg mb-6">
-                    <p>
-                        <strong>Email:</strong>{' '}
-                        <a
-                            href="mailto:hello@spinncreative.co.uk"
-                            className="text-[#ff856b]"
-                        >
-                            hello@spinncreative.co.uk
-                        </a>
-                    </p>
-                    <p>
-                        <strong>Phone:</strong> Phone Number
-                    </p>
-                </div>
-
-                <h3 className="text-3xl font-bold mb-4">Follow us:</h3>
-                <ul className="list-disc pl-5">
-                    <li className="mb-2">
-                        <strong>Instagram:</strong> Instagram Handle
-                    </li>
-                    <li className="mb-2">
-                        <strong>LinkedIn:</strong> LinkedIn Profile
-                    </li>
-                </ul>
-
-                <p className="text-lg mb-6">
-                    Or fill out the form below, and we'll get back to you as
-                    soon as possible.
-                </p>
-
-                <p className="text-lg mb-6">
-                    Let’s make something extraordinary together.
-                </p>
-            </section>
-
-            <section className="contact-us-section-container">
-                <form className="contact-us-form" onSubmit={handleSubmit}>
-                    <div className="mb-4">
-                        <label className="block text-lg mb-2" htmlFor="name">
-                            Name
-                        </label>
-                        <input
-                            className="w-full p-2 border border-gray-300 rounded"
-                            type="text"
-                            id="name"
-                            name="name"
-                            value={formData.name}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-lg mb-2" htmlFor="email">
-                            Email
-                        </label>
-                        <input
-                            className="w-full p-2 border border-gray-300 rounded"
-                            type="email"
-                            id="email"
-                            name="email"
-                            value={formData.email}
-                            onChange={handleChange}
-                            required
-                        />
-                    </div>
-                    <div className="mb-4">
-                        <label className="block text-lg mb-2" htmlFor="message">
-                            Message
-                        </label>
-                        <textarea
-                            className="w-full p-2 border border-gray-300 rounded"
-                            id="message"
-                            name="message"
-                            value={formData.message}
-                            onChange={handleChange}
-                            rows={5}
-                            required
-                        ></textarea>
-                    </div>
-                    <button className="btn-submit" type="submit">
-                        Send message
-                    </button>
-                </form>
-                {status && <p className="mt-4">{status}</p>}
-            </section>
+export default function ContactUsPage(): JSX.Element {
+  return (
+    <div>
+      <section className="contact-us-hero flex items-center justify-center text-center">
+        <div className="contact-us-hero-overlay">
+          <h1 className="text-6xl font-bold text-white">Contact us</h1>
         </div>
-    );
+      </section>
+
+      <section className="contact-us-section-container">
+        <h2 className="text-4xl font-bold mb-4">Get in touch</h2>
+        <p className="text-lg mb-6">
+          Ready to start a project or just want to learn more about what we can do for you? We'd love to hear from you! At Spinn Creative, we're always excited to collaborate on creative projects, big or small.
+        </p>
+
+        <div className="text-lg mb-4">
+          <p>
+            <strong>Email:</strong>{' '}
+            <a
+              href="mailto:hello@spinncreative.co.uk"
+              className="underline text-[#ff856b]"
+            >
+              hello@spinncreative.co.uk
+            </a>
+          </p>
+          <p>
+            <strong>Phone:</strong> Phone Number
+          </p>
+        </div>
+
+        <h3 className="text-3xl font-bold mb-4">Follow us:</h3>
+        <ul>
+          <li className="flex mb-2">
+            <Facebook />
+            <Link
+              href="https://www.facebook.com/people/Spinn-Creative/61565518587208/"
+              className="ml-1 no-underline hover:underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Facebook
+            </Link>
+          </li>
+          <li className="flex mb-2">
+            <Instagram />
+            <Link
+              href="https://www.instagram.com/spinncreative360/"
+              className="ml-1 hover:underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              Instagram
+            </Link>
+          </li>
+          <li className="flex mb-2">
+            <Youtube />
+            <Link
+              href="https://www.youtube.com/@spinncreative360"
+              className="ml-1 hover:underline"
+              target="_blank"
+              rel="noreferrer"
+            >
+              YouTube
+            </Link>
+          </li>
+        </ul>
+
+        <p className="text-lg mb-6">
+          Or fill out the form below, and we'll get back to you as soon as possible.
+        </p>
+
+        <p className="text-lg mb-6">Let’s make something extraordinary together.</p>
+      </section>
+
+      {/* Import Client-Side Form */}
+      <section className="contact-us-section-container">
+        <ContactForm />
+      </section>
+    </div>
+  );
 }

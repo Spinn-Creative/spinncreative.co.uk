@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Mail, Phone, Instagram, Linkedin } from 'react-feather';
+import { Mail, Phone, Instagram, Facebook, Youtube } from 'react-feather';
 
 export default function Footer(): JSX.Element {
     // Explicitly specifying the return type
@@ -55,23 +55,33 @@ export default function Footer(): JSX.Element {
                     <h3 className="footer-heading">Connect with us</h3>
                     <ul className="footer-list">
                         <li className="footer-item">
-                            <Linkedin className="footer-icon" />
+                            <Facebook className="footer-icon" />
                             <Link
-                                href="https://www.linkedin.com"
+                                href="https://www.facebook.com/people/Spinn-Creative/61565518587208/"
                                 className="footer-link"
                                 target="_blank"
                             >
-                                LinkedIn
+                                Facebook
                             </Link>
                         </li>
                         <li className="footer-item">
                             <Instagram className="footer-icon" />
                             <Link
-                                href="https://www.instagram.com"
+                                href="https://www.instagram.com/spinncreative360/"
                                 className="footer-link"
                                 target="_blank"
                             >
                                 Instagram
+                            </Link>
+                        </li>
+                        <li className="footer-item">
+                            <Youtube className="footer-icon" />
+                            <Link
+                                href="https://www.youtube.com/@spinncreative360"
+                                className="footer-link"
+                                target="_blank"
+                            >
+                                YouTube
                             </Link>
                         </li>
                     </ul>

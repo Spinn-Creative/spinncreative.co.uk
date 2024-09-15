@@ -1,5 +1,16 @@
 import Link from 'next/link';
 import Image from 'next/image';
+import type { Metadata } from 'next';
+import { title } from '../layout';
+
+export const metadata: Metadata = {
+  title: `${title} - 3D Modelling`,
+  description:
+      'From sculpting to rigging, Spinn Creative has a range of 3D solutions to suit your creative projects.',
+  alternates: {
+      canonical: 'https://www.spinncreative.co.uk/3d-modelling',
+  },
+};
 
 export default function ThreeDModelling(): JSX.Element {
     return (

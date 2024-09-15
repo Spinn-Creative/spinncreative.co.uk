@@ -1,3 +1,15 @@
+import type { Metadata } from 'next';
+import { title } from '../layout';
+
+export const metadata: Metadata = {
+  title: `${title} - About us`,
+  description:
+      'We are a business-to-business creative agency, bringing cutting edge creative solutions to the commercial sector.',
+  alternates: {
+      canonical: 'https://www.spinncreative.co.uk/about-us',
+  },
+};
+
 export default function AboutUs(): JSX.Element {
     return (
         <div>

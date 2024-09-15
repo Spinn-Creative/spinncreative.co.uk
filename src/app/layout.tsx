@@ -6,10 +6,12 @@ import Footer from '@/components/Footer';
 
 import '../../public/styles/all.scss';
 
+export const title = 'Spinn Creative';
+export const description = 'Spinn Creative is a business-to-business creative agency in the UK, bringing cutting edge creative solutions to the commercial sector.';
+
 export const metadata: Metadata = {
-    title: 'Spinn Creative',
-    description:
-        'Spinn Creative is a business-to-business creative agency in the UK, bringing cutting edge creative solutions to the commercial sector.',
+    title: `${title}`,
+    description: `${description}`,
     applicationName: 'Spinn Creative',
     authors: [
         {
@@ -18,20 +20,16 @@ export const metadata: Metadata = {
         },
     ],
     referrer: 'origin-when-cross-origin',
-    keywords: 'graphics design, 3d modelling, animation',
+    keywords: 'graphics, 3d modelling, animation',
     formatDetection: {
         email: true,
         address: true,
         telephone: true,
     },
     metadataBase: new URL('https://spinncreative.co.uk'),
-    alternates: {
-        canonical: 'https://www.spinncreative.co.uk',
-    },
     openGraph: {
         title: 'Spinn Creative',
-        description:
-            'Spinn Creative is a business-to-business creative agency in the UK, bringing cutting edge creative solutions to the commercial sector.',
+        description: `${description}`,
         siteName: 'Spinn Creative',
         url: 'https://www.spinncreative.co.uk',
         images: [
@@ -46,8 +44,7 @@ export const metadata: Metadata = {
     twitter: {
         card: 'summary_large_image',
         title: 'Spinn Creative',
-        description:
-            'Spinn Creative is a business-to-business creative agency in the UK, bringing cutting edge creative solutions to the commercial sector.',
+        description: `${description}`,
         images: ['https://www.spinncreative.co.uk/images/meta-image.jpg'],
     },
 };
@@ -63,9 +60,8 @@ export default function RootLayout({
         name: 'Spinn Creative',
         address: 'United Kingdom',
         email: 'hello@spinncreative.co.uk',
-        description:
-            'Spinn Creative is a business-to-business creative agency in the UK, bringing cutting edge creative solutions to the commercial sector.',
-        knowsAbout: ['graphics design', '3d modelling', 'animation'],
+        description: `${description}`,
+        knowsAbout: ['graphics', '3d modelling', 'animation'],
         url: 'https://www.spinncreative.co.uk',
     };
 

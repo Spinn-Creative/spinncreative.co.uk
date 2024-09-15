@@ -1,4 +1,15 @@
 import React from 'react';
+import type { Metadata } from 'next';
+import { title } from '../layout';
+
+export const metadata: Metadata = {
+  title: `${title} - Careers`,
+  description:
+      'We are always looking for talented individuals to join our team.',
+  alternates: {
+      canonical: 'https://www.spinncreative.co.uk/careers',
+  },
+};
 
 export default function Careers(): JSX.Element {
     return (

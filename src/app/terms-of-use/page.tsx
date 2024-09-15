@@ -1,4 +1,15 @@
 import React from 'react';
+import type { Metadata } from 'next';
+import { title } from '../layout';
+
+export const metadata: Metadata = {
+  title: `${title} - Terms of Use`,
+  description:
+      'All content on our site, including text, graphics, logos, and images, is the property of Spinn Creative and is protected by copyright laws.',
+  alternates: {
+      canonical: 'https://www.spinncreative.co.uk/terms-of-use',
+  },
+};
 
 export default function TermsOfUse(): JSX.Element {
     return (

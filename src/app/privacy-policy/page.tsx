@@ -1,4 +1,15 @@
 import React from 'react';
+import type { Metadata } from 'next';
+import { title } from '../layout';
+
+export const metadata: Metadata = {
+  title: `${title} - Privacy Policy`,
+  description:
+      'At Spinn Creative, we are committed to protecting your privacy.',
+  alternates: {
+      canonical: 'https://www.spinncreative.co.uk/privacy-policy',
+  },
+};
 
 export default function PrivacyPolicy(): JSX.Element {
     return (

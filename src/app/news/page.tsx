@@ -1,4 +1,15 @@
 import React from 'react';
+import type { Metadata } from 'next';
+import { title } from '../layout';
+
+export const metadata: Metadata = {
+  title: `${title} - News`,
+  description:
+      'Get the latest information and announcements from Spinn Creative',
+  alternates: {
+      canonical: 'https://www.spinncreative.co.uk/new',
+  },
+};
 
 export default function News(): JSX.Element {
     return (

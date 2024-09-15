@@ -1,4 +1,15 @@
 import Link from 'next/link';
+import type { Metadata } from 'next';
+import { title } from '../layout';
+
+export const metadata: Metadata = {
+  title: `${title} - Animation`,
+  description:
+      'With a wealth of experience working on a wide range of animation and VFX projects,  Spinn Creative has a range of 2D and 3D solutions to suit your creative projects.',
+  alternates: {
+      canonical: 'https://www.spinncreative.co.uk/animation',
+  },
+};
 
 export default function Animation(): JSX.Element {
     return (
