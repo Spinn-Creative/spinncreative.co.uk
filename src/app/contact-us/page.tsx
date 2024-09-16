@@ -40,7 +40,7 @@ export default function ContactUsPage(): JSX.Element {
             </a>
           </p>
           <p>
-            <strong>Phone:</strong> Phone Number
+            <strong>Phone:</strong> +44 [0]746 261 6280
           </p>
         </div>
 

@@ -103,10 +103,10 @@ export default function Footer(): JSX.Element {
                         <li className="footer-item">
                             <Phone className="footer-icon" />
                             <Link
-                                href="tel:+440000000000"
+                                href="tel:+447462616280"
                                 className="footer-link"
                             >
-                                +44 0000 000 0000
+                                +44 [0]746 261 6280
                             </Link>
                         </li>
                     </ul>
