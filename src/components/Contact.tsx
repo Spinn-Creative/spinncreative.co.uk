@@ -1,0 +1,100 @@
+export default function Contact() {
+  return (
+    <section id="contact" className="py-[100px] bg-[rgba(255,255,255,0.02)]">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16 fade-in">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4">Get In Touch</h2>
+          <p className="text-lg opacity-80">Let's discuss your next creative project</p>
+        </div>
+
+        <div className="grid gap-[50px] md:grid-cols-2 contact-container">
+          <div className="contact-info fade-in">
+            <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
+
+            <div className="flex items-start mb-[30px]">
+              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px]">
+                <img src="/api/placeholder/20/20" alt="Location" />
+              </div>
+              <div>
+                <h4 className="font-semibold mb-1">Location</h4>
+                <p>123 Creative Avenue, Design District, 10001</p>
+              </div>
+            </div>
+
+            <div className="flex items-start mb-[30px]">
+              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px]">
+                <img src="/api/placeholder/20/20" alt="Email" />
+              </div>
+              <div>
+                <h4 className="font-semibold mb-1">Email</h4>
+                <p>hello@spinncreative.com</p>
+              </div>
+            </div>
+
+            <div className="flex items-start mb-[30px]">
+              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px]">
+                <img src="/api/placeholder/20/20" alt="Phone" />
+              </div>
+              <div>
+                <h4 className="font-semibold mb-1">Phone</h4>
+                <p>+1 (555) 123-4567</p>
+              </div>
+            </div>
+
+            <div className="flex mt-[30px] social-links">
+              {['Facebook', 'Twitter', 'Instagram', 'LinkedIn'].map((alt, i) => (
+                <a
+                  key={i}
+                  href="#"
+                  className="w-[40px] h-[40px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center mr-[15px] text-[var(--light)] transition-all hover:bg-[var(--primary)] hover:-translate-y-1"
+                >
+                  <img src="/api/placeholder/20/20" alt={alt} />
+                </a>
+              ))}
+            </div>
+          </div>
+
+          <div className="contact-form fade-in bg-[rgba(255,255,255,0.05)] p-10 rounded-2xl backdrop-blur-md">
+            <form>
+              {[
+                { id: 'name', type: 'text', label: 'Your Name' },
+                { id: 'email', type: 'email', label: 'Your Email' },
+                { id: 'subject', type: 'text', label: 'Subject' },
+              ].map(({ id, type, label }) => (
+                <div key={id} className="mb-5">
+                  <label htmlFor={id} className="block mb-2 font-medium">
+                    {label}
+                  </label>
+                  <input
+                    type={type}
+                    id={id}
+                    required={id !== 'subject'}
+                    className="w-full p-3 bg-[rgba(255,255,255,0.1)] text-white border border-[rgba(255,255,255,0.1)] rounded-lg focus:outline-none focus:border-[var(--primary)]"
+                  />
+                </div>
+              ))}
+
+              <div className="mb-5">
+                <label htmlFor="message" className="block mb-2 font-medium">
+                  Your Message
+                </label>
+                <textarea
+                  id="message"
+                  className="w-full p-3 h-[120px] resize-vertical bg-[rgba(255,255,255,0.1)] text-white border border-[rgba(255,255,255,0.1)] rounded-lg focus:outline-none focus:border-[var(--primary)]"
+                  required
+                />
+              </div>
+
+              <button
+                type="submit"
+                className="submit-btn bg-[var(--primary)] text-white border-2 border-[var(--primary)] font-semibold py-3 px-6 rounded-full transition hover:bg-transparent hover:text-[var(--primary)]"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}

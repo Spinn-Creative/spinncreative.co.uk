@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-@import 'global';
-@import 'header';
-@import 'navbar';
-@import 'main';
-@import 'footer';
+// Your custom variables and global styles
+
+:root {
+  --primary: #ff4d5a;
+  --secondary: #6c63ff;
+  --dark: #1a1a2e;
+  --light: #f8f9fa;
+  --transition: all 0.3s ease;
+}
+
+body {
+  @apply bg-[var(--dark)] text-[var(--light)] overflow-x-hidden font-sans;
+}

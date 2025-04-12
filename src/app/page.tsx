@@ -1,23 +1,17 @@
 import Hero from '@/components/Hero';
-import OurServices from '@/components/OurServices';
-import Jumbotron from '@/components/Jumbotron';
-import type { Metadata } from 'next';
-import { title, description } from './layout';
+import Services from '@/components/Services';
+import Portfolio from '@/components/Portfolio';
+import Testimonials from '@/components/Testimonials';
+import Contact from '@/components/Contact';
 
-export const metadata: Metadata = {
-  title: `${title} - Pushing the boundaries of visual storytelling.`,
-  description: `${description}`,
-  alternates: {
-      canonical: 'https://www.spinncreative.co.uk',
-  },
-};
-
-export default function Home(): JSX.Element {
-    return (
-        <>
-            <Hero />
-            <OurServices />
-            <Jumbotron />
-        </>
-    );
+export default function HomePage() {
+  return (
+    <>
+      <Hero />
+      <Services />
+      <Portfolio />
+      <Testimonials />
+      <Contact />
+    </>
+  );
 }

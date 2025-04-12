@@ -1,5 +1,5 @@
 // pages/contact-us.tsx (Server-Side Component)
-import ContactForm from '@/components/ContactForm';
+import Contact from '@/components/Contact';
 import { Facebook, Instagram, Youtube } from 'react-feather';
 import Link from 'next/link';
 import type { Metadata } from 'next';
@@ -90,7 +90,7 @@ export default function ContactUsPage(): JSX.Element {
 
       {/* Import Client-Side Form */}
       <section className="contact-us-section-container">
-        <ContactForm />
+        <Contact />
       </section>
     </div>
   );
