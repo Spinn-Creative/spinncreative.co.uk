@@ -4,7 +4,7 @@ import Portfolio from '@/components/Portfolio';
 import Testimonials from '@/components/Testimonials';
 import Contact from '@/components/Contact';
 
-export default function HomePage() {
+export default function HomePage(): JSX.Element {
   return (
     <>
       <Hero />

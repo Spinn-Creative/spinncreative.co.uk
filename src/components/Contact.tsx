@@ -1,3 +1,13 @@
+import {
+  Facebook,
+  Instagram,
+  Linkedin,
+  X as TwitterX,
+  MapPin,
+  Mail,
+  Phone,
+} from 'react-feather';
+
 export default function Contact() {
   return (
     <section id="contact" className="py-[100px] bg-[rgba(255,255,255,0.02)]">
@@ -12,18 +22,18 @@ export default function Contact() {
             <h3 className="text-2xl font-semibold mb-6">Contact Information</h3>
 
             <div className="flex items-start mb-[30px]">
-              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px]">
-                <img src="/api/placeholder/20/20" alt="Location" />
+              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px] text-white">
+                <MapPin size={20} />
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Location</h4>
-                <p>123 Creative Avenue, Design District, 10001</p>
+                <p>Bristol</p>
               </div>
             </div>
 
             <div className="flex items-start mb-[30px]">
-              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px]">
-                <img src="/api/placeholder/20/20" alt="Email" />
+              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px] text-white">
+                <Mail size={20} />
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Email</h4>
@@ -32,25 +42,48 @@ export default function Contact() {
             </div>
 
             <div className="flex items-start mb-[30px]">
-              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px]">
-                <img src="/api/placeholder/20/20" alt="Phone" />
+              <div className="min-w-[40px] h-[40px] bg-[var(--primary)] rounded-full flex justify-center items-center mr-[15px] text-white">
+                <Phone size={20} />
               </div>
               <div>
                 <h4 className="font-semibold mb-1">Phone</h4>
-                <p>+1 (555) 123-4567</p>
+                <p><span>+44 [0] 746 261 6280</span></p>
               </div>
             </div>
 
-            <div className="flex mt-[30px] social-links">
-              {['Facebook', 'Twitter', 'Instagram', 'LinkedIn'].map((alt, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-[40px] h-[40px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center mr-[15px] text-[var(--light)] transition-all hover:bg-[var(--primary)] hover:-translate-y-1"
-                >
-                  <img src="/api/placeholder/20/20" alt={alt} />
-                </a>
-              ))}
+            <div className="flex mt-[30px] space-x-[15px]">
+              <a
+                href="https://www.facebook.com/people/Spinn-Creative/61565518587208/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[40px] h-[40px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center text-[var(--light)] transition-all hover:bg-[var(--primary)] hover:-translate-y-1"
+              >
+                <Facebook size={20} />
+              </a>
+              <a
+                href="https://x.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[40px] h-[40px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center text-[var(--light)] transition-all hover:bg-[var(--primary)] hover:-translate-y-1"
+              >
+                <TwitterX size={20} />
+              </a>
+              <a
+                href="https://www.instagram.com/spinncreative360/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[40px] h-[40px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center text-[var(--light)] transition-all hover:bg-[var(--primary)] hover:-translate-y-1"
+              >
+                <Instagram size={20} />
+              </a>
+              <a
+                href="https://linkedin.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-[40px] h-[40px] bg-[rgba(255,255,255,0.1)] rounded-full flex justify-center items-center text-[var(--light)] transition-all hover:bg-[var(--primary)] hover:-translate-y-1"
+              >
+                <Linkedin size={20} />
+              </a>
             </div>
           </div>
 
