@@ -8,13 +8,13 @@ export default function Testimonials() {
         </div>
         <div className="max-w-2xl mx-auto bg-white bg-opacity-5 p-10 rounded-2xl text-center fade-in">
           <img
-            src="/api/placeholder/80/80"
+            src="/images/sarah-johnson.jpeg"
             alt="Client"
             className="w-20 h-20 rounded-full mx-auto mb-4 border-4 border-[var(--primary)] object-cover"
           />
           <h4 className="text-lg font-semibold">Sarah Johnson</h4>
           <p className="text-[var(--primary)] text-sm mb-3">Marketing Director, TechFuture</p>
-          <div className="text-yellow-400 text-xl mb-4">★★★★★</div>
+          <div className="star-rating text-yellow-400 text-xl mb-4">★★★★★</div>
           <p className="italic leading-relaxed text-white/80">
             "Working with Spinn Creative transformed our brand identity. Their motion graphics and
             3D animations gave us exactly the modern, innovative look we were after. The team was

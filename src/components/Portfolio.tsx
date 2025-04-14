@@ -24,6 +24,46 @@ export default function Portfolio() {
     });
   }, []);
 
+  const portfolioItems = [
+    {
+      category: '2d',
+      title: 'Character Concept Pack',
+      desc: 'Original 2D character illustrations and turnarounds for use in indie game prototyping.',
+      image: '/images/2d-pixel-art.png',
+    },
+    {
+      category: '2d',
+      title: 'Infographic Short',
+      desc: 'Flat 2D animated explainer built for an NGO campaign on digital safety.',
+      image: '/images/2d-infographic-short.png',
+    },
+    {
+      category: '3d',
+      title: 'VR Asset Kit',
+      desc: 'Low-poly 3D models optimized for virtual reality workflows and WebGL environments.',
+      image: '/images/vr-asset-kit.png',
+    },
+    {
+      category: 'games',
+      title: 'Pixel World Assets',
+      desc: 'Tile-based environments, UI, and sprites for a retro-style mobile game demo.',
+      image: '/images/game.png',
+    },
+    {
+      category: 'audio',
+      title: 'Sound Library Suite',
+      desc: 'Custom SFX, ambient loops, and foley designed for interactive digital spaces.',
+      image: '/images/sls.png',
+    },
+    {
+      category: 'motion',
+      title: 'Logo Reveal Toolkit',
+      desc: 'Modular motion graphics pack created for microbranding and transitions.',
+      image: '/images/lrt.png',
+    },
+  ];
+
+
   return (
     <section id="portfolio" className="portfolio">
       <div className="container">
@@ -42,41 +82,10 @@ export default function Portfolio() {
         </div>
 
         <div className="portfolio-grid">
-          {[
-            {
-              category: '2d',
-              title: 'Adventure Series',
-              desc: '2D character animation for streaming series',
-            },
-            {
-              category: '3d',
-              title: 'Product Launch',
-              desc: '3D visualization for new tech product',
-            },
-            {
-              category: 'games',
-              title: 'Cosmic Voyage',
-              desc: 'Mobile adventure game with custom graphics',
-            },
-            {
-              category: 'motion',
-              title: 'Brand Identity',
-              desc: 'Motion graphics package for global brand',
-            },
-            {
-              category: 'audio',
-              title: 'Tech Insights',
-              desc: 'Full audio production for technology podcast',
-            },
-            {
-              category: '2d',
-              title: 'Finance Simplified',
-              desc: 'Explainer video series with custom illustrations',
-            },
-          ].map((item, i) => (
+          {portfolioItems.map((item, i) => (
             <div className="portfolio-item fade-in" data-category={item.category} key={i}>
               <img
-                src="/api/placeholder/400/300"
+                src={item.image}
                 alt={item.title}
                 className="portfolio-img"
               />

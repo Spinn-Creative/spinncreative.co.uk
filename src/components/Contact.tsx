@@ -1,3 +1,5 @@
+'use client';
+
 import {
   Facebook,
   Instagram,
@@ -7,8 +9,36 @@ import {
   Mail,
   Phone,
 } from 'react-feather';
+import { useState } from 'react';
 
 export default function Contact() {
+  const [status, setStatus] = useState('');
+
+  async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
+    e.preventDefault();
+
+    const form = e.currentTarget;
+    const formData = {
+      name: (form.elements.namedItem('name') as HTMLInputElement).value,
+      email: (form.elements.namedItem('email') as HTMLInputElement).value,
+      subject: (form.elements.namedItem('subject') as HTMLInputElement).value,
+      message: (form.elements.namedItem('message') as HTMLTextAreaElement).value,
+    };
+
+    try {
+      const res = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+      setStatus(data.message);
+    } catch (error) {
+      setStatus('Something went wrong. Please try again.');
+    }
+  }
+
   return (
     <section id="contact" className="py-[100px] bg-[rgba(255,255,255,0.02)]">
       <div className="container mx-auto px-4">
@@ -88,7 +118,7 @@ export default function Contact() {
           </div>
 
           <div className="contact-form fade-in bg-[rgba(255,255,255,0.05)] p-10 rounded-2xl backdrop-blur-md">
-            <form>
+            <form onSubmit={handleSubmit}>
               {[
                 { id: 'name', type: 'text', label: 'Your Name' },
                 { id: 'email', type: 'email', label: 'Your Email' },
@@ -101,6 +131,7 @@ export default function Contact() {
                   <input
                     type={type}
                     id={id}
+                    name={id}
                     required={id !== 'subject'}
                     className="w-full p-3 bg-[rgba(255,255,255,0.1)] text-white border border-[rgba(255,255,255,0.1)] rounded-lg focus:outline-none focus:border-[var(--primary)]"
                   />
@@ -113,6 +144,7 @@ export default function Contact() {
                 </label>
                 <textarea
                   id="message"
+                  name="message"
                   className="w-full p-3 h-[120px] resize-vertical bg-[rgba(255,255,255,0.1)] text-white border border-[rgba(255,255,255,0.1)] rounded-lg focus:outline-none focus:border-[var(--primary)]"
                   required
                 />
@@ -124,6 +156,10 @@ export default function Contact() {
               >
                 Send Message
               </button>
+
+              {status && (
+                <p className="mt-4 text-sm text-[var(--light)]">{status}</p>
+              )}
             </form>
           </div>
         </div>

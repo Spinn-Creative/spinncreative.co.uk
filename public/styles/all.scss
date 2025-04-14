@@ -16,14 +16,16 @@ body {
   @apply bg-[var(--dark)] text-[var(--light)] overflow-x-hidden font-sans;
 }
 
-header {
+#header {
   background: white;
   color: black;
 }
 
-footer {
+#footer {
   background: white;
   color: black;
 }
 
-// portfolio
+.star-rating {
+  color: #ffd731;
+}
